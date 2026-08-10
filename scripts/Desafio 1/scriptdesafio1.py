@@ -1,3 +1,63 @@
+"""
+================================================================================
+RESOLUÇÃO DA QUESTÃO 1 – ANÁLISE EXPLORATÓRIA (EDA)
+================================================================================
+
+1. OBJETIVO
+   Realizar uma análise exploratória inicial na tabela 'orders' para responder
+   perguntas críticas sobre volume, distribuição e qualidade dos dados, sem
+   realizar qualquer limpeza ou tratamento. O objetivo principal era avaliar
+   se os dados são confiáveis para tomada de decisões.
+
+2. ABORDAGEM
+   A análise foi implementada em Python 3, utilizando apenas bibliotecas
+   padrão (csv, datetime, os), conforme exigido pelo desafio. Não foram
+   utilizados pandas, dask ou polars.
+
+   O script percorre o arquivo 'orders.csv', lê cada linha com csv.DictReader
+   e extrai as seguintes métricas:
+   - Total de linhas e colunas.
+   - Intervalo de datas (mínimo e máximo da coluna 'created_at').
+   - Estatísticas descritivas da coluna 'total': mínimo, máximo, média.
+   - Contagem de valores nulos nessas duas colunas.
+
+   Para garantir a robustez do parsing:
+   - Valores ausentes ou não numéricos em 'total' são contabilizados como nulos.
+   - Datas com formato inválido são ignoradas para o cálculo do intervalo.
+
+3. RESULTADOS OBTIDOS
+   - Total de linhas: 48.998
+   - Total de colunas: 13
+   - Intervalo de datas: 2020-01-01 01:19:28 a 2026-12-31 23:43:09
+   - Valor mínimo de 'total': R$ 32,62
+   - Valor máximo de 'total': R$ 127.262,02
+   - Valor médio de 'total': R$ 28.704,99
+   - Nulos em 'total': 0
+   - Nulos em 'created_at': 0
+
+4. DIAGNÓSTICO DE CONFIABILIDADE
+   Com base na análise, concluiu-se que o dataset NÃO está pronto para
+   análises diretas pelos seguintes motivos:
+   - Presença de datas futuras (até 2026) que podem distorcer análises
+     temporais e devem ser investigadas.
+   - Outlier significativo em 'total' (máximo ~4,4× a média), que pode
+     enviesar médias e modelos preditivos.
+   - Apesar da boa completude (sem nulos nas colunas chave), recomenda-se
+     tratamento de outliers e validação das datas inconsistentes antes de
+     qualquer modelagem ou tomada de decisão.
+
+5. VALIDAÇÃO CRUZADA
+   Os resultados obtidos nesta análise exploratória foram posteriormente
+   reproduzidos via consulta SQL diretamente no PostgreSQL (Questão 1.1),
+   confirmando a consistência dos dados e da implementação. Essa validação
+   dupla assegura a confiabilidade das métricas apresentadas.
+
+================================================================================
+"""
+
+
+
+
 import csv
 from datetime import datetime
 import os

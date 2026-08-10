@@ -1,0 +1,501 @@
+id,name,description,brand_id,category_id,ncm_code,unit_of_measure,is_active,created_at,updated_at
+1,Motor de Popa 6014,Motor de popa 4 tempos para embarcações de lazer,9,9,50675645,UN,TRUE,2023-06-07 05:32:02,2025-06-05 20:11:50
+2,Vela Mestra 3870,Vela mestra em dacron para veleiros 32 pés,10,13,19180016,UN,TRUE,2026-10-15 16:00:03,2026-11-01 00:37:26
+3,Tinta Antifouling 5479,Tinta antiincrustante 3.6L para casco,4,4,26507166,L,TRUE,2023-03-27 06:03:29,2026-09-11 04:08:29
+4,Sonar Transducer 9933,Transdutor de sonar para profundidade,5,10,87920921,UN,TRUE,2021-11-10 09:59:03,2023-05-05 18:50:45
+5,Bússola de Bordo 3641,Bússola magnética líquida com iluminação,4,6,78779264,UN,TRUE,2025-04-30 23:17:31,2026-08-29 06:22:16
+6,Defensa Náutica 7487,Defensa cilíndrica em PVC,10,3,36883895,PC,TRUE,2023-04-04 06:05:59,2023-11-09 15:52:08
+7,Cabo Náutico 4894,Cabo de polipropileno trançado,8,6,58571428,M,TRUE,2023-05-13 09:10:43,2025-01-13 17:55:29
+8,Cabo Náutico 1373,Cabo de polipropileno trançado,4,14,13000107,M,TRUE,2026-07-11 16:45:44,2026-11-29 04:14:55
+9,Tinta Antifouling 874,Tinta antiincrustante 3.6L para casco,7,5,59463492,L,TRUE,2026-09-29 11:18:19,2026-11-11 10:12:14
+10,Colete Salva-Vidas 6199,Colete homologado classe III,9,14,52862023,UN,TRUE,2022-05-14 08:06:51,2023-05-28 11:26:18
+11,Hélice de Alumínio 4091,Hélice 3 pás para motor de popa,1,5,82685264,UN,TRUE,2023-08-24 10:37:41,2025-10-29 09:30:07
+12,Cabo Náutico 8028,Cabo de polipropileno trançado,12,14,20936775,M,TRUE,2025-09-26 21:45:04,2025-10-23 18:27:16
+13,GPS Plotter 7021,GPS chartplotter com cartografia,4,4,70125519,UN,TRUE,2024-10-02 20:19:02,2025-12-02 01:51:36
+14,Defensa Náutica 1161,Defensa cilíndrica em PVC,8,12,36860079,PC,TRUE,2025-07-07 18:29:47,2026-09-09 07:40:36
+15,Bússola de Bordo 6287,Bússola magnética líquida com iluminação,1,9,86734561,UN,TRUE,2021-03-14 08:34:06,2024-04-21 20:17:40
+16,Hélice de Alumínio 8340,Hélice 3 pás para motor de popa,3,1,37075384,UN,TRUE,2026-07-20 14:18:42,2026-12-31 15:39:17
+17,GPS Plotter 3436,GPS chartplotter com cartografia,8,9,24614829,UN,TRUE,2022-11-23 14:47:37,2024-11-02 23:01:09
+18,Âncora Bruce 7120,Âncora de garra tipo Bruce em aço galvanizado,5,4,30173313,UN,TRUE,2025-07-03 10:26:47,2025-12-07 19:32:27
+19,Âncora Bruce 4405,Âncora de garra tipo Bruce em aço galvanizado,6,14,43098343,UN,TRUE,2024-04-11 03:04:26,2026-08-28 01:13:32
+20,GPS Plotter 7169,GPS chartplotter com cartografia,7,6,71298225,UN,TRUE,2026-06-14 10:10:02,2026-09-22 21:02:27
+21,Âncora Bruce 6850,Âncora de garra tipo Bruce em aço galvanizado,2,12,60395870,UN,TRUE,2025-12-18 22:23:48,2026-06-12 02:46:38
+22,Vela Mestra 7039,Vela mestra em dacron para veleiros 32 pés,5,9,64388226,UN,TRUE,2024-10-25 01:55:19,2025-12-10 20:53:28
+23,Âncora Bruce 4975,Âncora de garra tipo Bruce em aço galvanizado,5,2,95095446,UN,TRUE,2022-08-01 03:25:12,2025-08-17 22:41:05
+24,Colete Salva-Vidas 3398,Colete homologado classe III,10,5,64834488,UN,TRUE,2023-01-23 02:34:17,2023-05-09 10:21:54
+25,Bússola de Bordo 799,Bússola magnética líquida com iluminação,4,7,60029856,UN,TRUE,2020-04-07 12:04:54,2026-11-21 19:53:40
+26,Bússola de Bordo 3795,Bússola magnética líquida com iluminação,6,12,52325309,UN,TRUE,2023-07-12 12:19:16,2025-02-07 09:30:03
+27,Colete Salva-Vidas 7001,Colete homologado classe III,3,6,81669019,UN,TRUE,2021-08-16 15:56:25,2022-09-23 02:15:15
+28,Colete Salva-Vidas 1890,Colete homologado classe III,12,3,51088849,UN,TRUE,2026-01-09 05:49:29,2026-10-31 18:48:44
+29,Defensa Náutica 3153,Defensa cilíndrica em PVC,6,10,21302420,PC,TRUE,2020-12-11 05:37:55,2025-12-27 21:51:54
+30,Colete Salva-Vidas 8612,Colete homologado classe III,2,10,52979348,UN,TRUE,2021-07-31 05:21:39,2026-06-24 22:55:13
+31,Sonar Transducer 4635,Transdutor de sonar para profundidade,3,4,81807314,UN,TRUE,2022-11-14 16:13:14,2026-02-19 10:44:53
+32,Defensa Náutica 793,Defensa cilíndrica em PVC,9,6,29488584,PC,TRUE,2022-11-28 16:59:03,2023-02-05 02:29:22
+33,Hélice de Alumínio 7117,Hélice 3 pás para motor de popa,11,5,13391884,UN,TRUE,2021-02-16 20:34:51,2026-06-25 05:48:30
+34,Defensa Náutica 5959,Defensa cilíndrica em PVC,7,14,52963458,PC,TRUE,2022-12-18 01:39:06,2026-07-01 21:47:59
+35,Colete Salva-Vidas 8211,Colete homologado classe III,2,1,67937611,UN,TRUE,2026-07-13 04:57:48,2026-10-27 01:58:22
+36,GPS Plotter 8951,,11,11,34113573,UN,TRUE,2025-02-17 20:06:01,2026-11-14 15:18:00
+37,Âncora Bruce 3597,Âncora de garra tipo Bruce em aço galvanizado,11,13,71673210,UN,TRUE,2026-12-09 07:12:10,2026-12-13 23:56:24
+38,Sonar Transducer 7290,Transdutor de sonar para profundidade,5,6,77592988,UN,TRUE,2021-12-22 05:03:01,2022-02-20 04:12:13
+39,Bateria Náutica 3427,Bateria estacionária 105Ah náutica,7,7,35734374,UN,TRUE,2023-05-22 00:19:36,2026-11-05 14:59:52
+40,Tinta Antifouling 4321,Tinta antiincrustante 3.6L para casco,4,11,85345895,L,TRUE,2024-06-26 14:04:53,2026-12-15 06:40:20
+41,Âncora Bruce 2416,Âncora de garra tipo Bruce em aço galvanizado,12,8,84914514,UN,TRUE,2022-05-22 22:41:33,2022-08-27 00:57:19
+42,Tinta Antifouling 503,Tinta antiincrustante 3.6L para casco,10,9,10032928,L,TRUE,2020-02-22 13:52:08,2024-08-24 04:36:59
+43,Defensa Náutica 9513,Defensa cilíndrica em PVC,10,1,86849289,PC,TRUE,2024-11-26 22:54:15,2025-01-25 02:13:20
+44,Motor de Popa 9645,Motor de popa 4 tempos para embarcações de lazer,7,9,46650771,UN,TRUE,2026-02-09 15:59:24,2026-03-29 10:39:56
+45,Tinta Antifouling 3620,Tinta antiincrustante 3.6L para casco,5,8,60564651,L,TRUE,2022-02-15 15:30:19,2026-01-13 19:51:14
+46,Defensa Náutica 5036,Defensa cilíndrica em PVC,10,10,67890393,PC,TRUE,2023-08-28 20:28:01,2023-11-18 20:25:43
+47,Motor de Popa 5561,Motor de popa 4 tempos para embarcações de lazer,10,7,29031648,UN,TRUE,2025-08-04 17:36:48,2025-09-28 17:58:14
+48,Bússola de Bordo 6684,Bússola magnética líquida com iluminação,8,4,25861491,UN,TRUE,2020-01-03 21:57:17,2024-02-07 01:13:36
+49,Bússola de Bordo 5407,Bússola magnética líquida com iluminação,3,11,95280616,UN,TRUE,2025-12-08 14:17:26,2026-01-09 00:16:11
+50,Vela Mestra 1577,Vela mestra em dacron para veleiros 32 pés,1,13,93898745,UN,TRUE,2026-05-23 17:24:23,2026-10-04 18:11:14
+51,Defensa Náutica 9969,Defensa cilíndrica em PVC,11,8,10618495,PC,TRUE,2022-12-17 06:16:09,2025-03-26 17:31:04
+52,Bateria Náutica 8532,Bateria estacionária 105Ah náutica,6,11,86377937,UN,TRUE,2024-11-24 06:42:17,2025-05-23 15:19:52
+53,Sonar Transducer 6909,Transdutor de sonar para profundidade,11,8,50781923,UN,TRUE,2026-07-16 02:51:16,2026-12-22 21:09:02
+54,Colete Salva-Vidas 6302,Colete homologado classe III,2,2,19008486,UN,TRUE,2020-10-31 01:49:54,2025-02-21 05:46:20
+55,GPS Plotter 6249,GPS chartplotter com cartografia,6,7,29094966,UN,TRUE,2026-03-08 06:33:57,2026-12-17 02:42:23
+56,Sonar Transducer 4571,Transdutor de sonar para profundidade,4,7,16386633,UN,TRUE,2025-07-27 05:48:11,2026-07-08 02:23:39
+57,Vela Mestra 6445,Vela mestra em dacron para veleiros 32 pés,11,1,68104273,UN,TRUE,2020-09-15 03:15:11,2022-04-16 21:23:19
+58,Sonar Transducer 3832,Transdutor de sonar para profundidade,9,1,20312754,UN,TRUE,2026-02-25 06:30:01,2026-09-17 18:12:13
+59,Bateria Náutica 8789,Bateria estacionária 105Ah náutica,11,3,91840820,UN,TRUE,2020-10-25 05:06:59,2026-05-27 05:47:10
+60,Vela Mestra 2410,Vela mestra em dacron para veleiros 32 pés,6,12,23510590,UN,TRUE,2020-03-28 15:40:54,2024-03-31 06:41:43
+61,Tinta Antifouling 693,Tinta antiincrustante 3.6L para casco,8,2,92156269,L,TRUE,2020-02-28 13:08:38,2023-04-06 05:33:49
+62,Defensa Náutica 3549,Defensa cilíndrica em PVC,12,1,14655251,PC,TRUE,2026-02-20 14:20:24,2026-12-21 12:40:02
+63,Colete Salva-Vidas 4753,Colete homologado classe III,1,11,90000712,UN,TRUE,2024-06-05 15:32:59,2024-12-06 23:42:55
+64,Tinta Antifouling 9693,,6,1,53138513,L,TRUE,2026-10-25 04:11:34,2026-11-28 00:08:33
+65,Colete Salva-Vidas 1933,Colete homologado classe III,12,6,16278731,UN,TRUE,2024-01-20 18:23:34,2026-10-22 02:31:51
+66,TBD,GPS chartplotter com cartografia,2,9,48573072,UN,TRUE,2022-06-20 03:03:01,2023-09-14 07:13:23
+67,Sonar Transducer 3474,Transdutor de sonar para profundidade,9,12,15583969,UN,TRUE,2025-11-01 09:51:44,2026-08-17 00:58:29
+68,Âncora Bruce 2455,Âncora de garra tipo Bruce em aço galvanizado,1,14,56961646,UN,TRUE,2023-06-22 07:38:23,2026-02-19 13:28:51
+69,Motor de Popa 2195,Motor de popa 4 tempos para embarcações de lazer,3,4,28195485,UN,TRUE,2025-05-09 08:51:33,2026-06-04 16:01:58
+70,Motor de Popa 1845,Motor de popa 4 tempos para embarcações de lazer,3,1,17494612,UN,TRUE,2022-04-12 18:03:56,2023-03-13 09:21:58
+71,Hélice de Alumínio 4633,Hélice 3 pás para motor de popa,12,14,42894142,UN,TRUE,2020-05-19 10:04:54,2022-12-29 05:38:07
+72,Motor de Popa 9771,Motor de popa 4 tempos para embarcações de lazer,1,5,51293276,UN,TRUE,2023-04-29 12:31:51,2023-11-03 10:51:36
+73,Hélice de Alumínio 3700,Hélice 3 pás para motor de popa,2,9,73651611,UN,TRUE,2025-09-13 01:07:34,2025-12-09 02:47:26
+74,Bússola de Bordo 702,Bússola magnética líquida com iluminação,12,8,18607512,UN,TRUE,2025-01-27 17:41:23,2025-04-09 17:31:25
+75,Vela Mestra 1913,Vela mestra em dacron para veleiros 32 pés,12,1,57272581,UN,TRUE,2024-07-25 11:40:13,2025-02-28 05:10:06
+76,Sonar Transducer 9995,Transdutor de sonar para profundidade,1,4,77559964,UN,TRUE,2023-07-19 07:14:36,2024-02-11 21:41:10
+77,Bateria Náutica 1945,Bateria estacionária 105Ah náutica,7,5,50274772,UN,TRUE,2022-03-07 14:58:45,2023-03-13 22:00:20
+78,Colete Salva-Vidas 8571,Colete homologado classe III,3,10,43150129,UN,FALSE,2026-10-21 00:30:25,2026-12-31 09:03:03
+79,Sonar Transducer 5255,Transdutor de sonar para profundidade,11,2,58025885,UN,TRUE,2023-04-06 19:01:55,2024-09-13 11:39:02
+80,Hélice de Alumínio 6964,Hélice 3 pás para motor de popa,9,7,77080035,UN,TRUE,2024-03-20 01:14:15,2025-02-10 01:04:03
+81,Motor de Popa 7678,Motor de popa 4 tempos para embarcações de lazer,4,5,52049999,UN,TRUE,2025-08-31 06:22:42,2026-05-03 04:39:03
+82,Bússola de Bordo 3993,Bússola magnética líquida com iluminação,6,11,40046509,UN,TRUE,2025-07-24 09:13:56,2026-05-06 19:39:38
+83,Bússola de Bordo 7257,Bússola magnética líquida com iluminação,6,10,60855553,UN,TRUE,2021-12-03 15:45:30,2024-06-06 12:19:09
+84,Defensa Náutica 656,Defensa cilíndrica em PVC,7,14,85610479,PC,TRUE,2026-07-07 12:59:40,2026-07-30 16:10:22
+85,Hélice de Alumínio 6549,Hélice 3 pás para motor de popa,2,14,72722927,UN,TRUE,2024-05-20 04:40:52,2026-06-03 15:15:13
+86,GPS Plotter 4446,GPS chartplotter com cartografia,10,3,53622414,UN,TRUE,2025-09-18 19:26:57,2026-09-30 03:42:22
+87,Vela Mestra 9995,Vela mestra em dacron para veleiros 32 pés,5,8,10803352,UN,TRUE,2022-06-12 00:52:10,2025-03-12 01:23:46
+88,Tinta Antifouling 6853,Tinta antiincrustante 3.6L para casco,3,8,49726301,L,TRUE,2025-10-30 05:56:19,2025-12-10 14:47:04
+89,Âncora Bruce 2687,Âncora de garra tipo Bruce em aço galvanizado,5,10,93414869,UN,TRUE,2023-07-28 08:33:33,2023-11-09 03:49:06
+90,Âncora Bruce 9445,Âncora de garra tipo Bruce em aço galvanizado,11,1,61682920,UN,TRUE,2020-09-12 23:54:47,2024-07-07 01:19:30
+91,Hélice de Alumínio 8603,Hélice 3 pás para motor de popa,4,3,81353036,UN,TRUE,2025-05-19 09:12:11,2025-07-16 15:45:50
+92,Sonar Transducer 1236,Transdutor de sonar para profundidade,12,6,73785003,UN,TRUE,2025-12-15 15:49:48,2026-03-15 00:23:07
+93,Bússola de Bordo 2692,Bússola magnética líquida com iluminação,11,6,57508865,UN,TRUE,2024-08-26 17:39:34,2026-07-08 19:58:58
+94,Tinta Antifouling 569,Tinta antiincrustante 3.6L para casco,2,12,26404077,L,TRUE,2023-08-03 18:06:41,2023-12-01 02:39:06
+95,Vela Mestra 6861,Vela mestra em dacron para veleiros 32 pés,9,11,21360133,UN,TRUE,2026-05-12 11:40:56,2026-07-03 09:32:04
+96,GPS Plotter 5928,GPS chartplotter com cartografia,1,8,30846746,UN,TRUE,2025-12-12 08:06:55,2026-03-28 20:08:14
+97,Motor de Popa 5396,Motor de popa 4 tempos para embarcações de lazer,2,12,70088431,UN,TRUE,2026-05-09 09:45:26,2026-08-12 15:04:59
+98,Bússola de Bordo 2458,Bússola magnética líquida com iluminação,3,1,30665833,UN,TRUE,2023-09-28 00:28:07,2024-11-22 20:33:17
+99,Âncora Bruce 2417,Âncora de garra tipo Bruce em aço galvanizado,1,5,44604461,UN,TRUE,2025-11-11 08:39:29,2026-04-25 14:25:29
+100,Defensa Náutica 2321,Defensa cilíndrica em PVC,2,7,23340899,PC,TRUE,2025-05-18 14:02:55,2025-07-24 05:02:32
+101,Defensa Náutica 3482,Defensa cilíndrica em PVC,5,6,61693992,PC,TRUE,2021-02-11 23:25:54,2023-08-01 07:06:31
+102,Bateria Náutica 3506,Bateria estacionária 105Ah náutica,10,7,72606095,UN,TRUE,2023-10-04 08:18:48,2024-06-28 13:26:21
+103,GPS Plotter 3183,GPS chartplotter com cartografia,3,3,21965947,UN,TRUE,2022-09-27 14:54:46,2026-07-31 13:41:27
+104,Bússola de Bordo 7303,Bússola magnética líquida com iluminação,7,10,39135186,UN,TRUE,2023-05-15 20:01:30,2026-11-19 21:18:47
+105,Defensa Náutica 1200,Defensa cilíndrica em PVC,4,9,55939931,PC,TRUE,2025-03-01 12:45:14,2026-05-02 20:50:05
+106,Hélice de Alumínio 2016,Hélice 3 pás para motor de popa,10,6,82115196,UN,TRUE,2020-02-10 18:28:03,2020-07-10 03:09:16
+107,Tinta Antifouling 5097,Tinta antiincrustante 3.6L para casco,9,10,18368744,L,TRUE,2020-09-03 04:24:20,2020-10-14 21:14:47
+108,Âncora Bruce 326,Âncora de garra tipo Bruce em aço galvanizado,3,13,59628963,UN,TRUE,2024-03-05 16:36:02,2024-08-09 22:43:17
+109,Âncora Bruce 8139,Âncora de garra tipo Bruce em aço galvanizado,11,5,20483595,UN,TRUE,2022-04-30 02:47:38,2023-08-11 01:46:30
+110,Hélice de Alumínio 1155,Hélice 3 pás para motor de popa,9,14,87556202,UN,TRUE,2026-04-02 06:24:32,2026-07-30 15:03:44
+111,Sonar Transducer 5950,Transdutor de sonar para profundidade,6,12,60141445,UN,TRUE,2024-08-22 12:37:14,2025-07-21 09:11:42
+112,Âncora Bruce 7692,Âncora de garra tipo Bruce em aço galvanizado,4,3,52782581,UN,TRUE,2022-08-09 11:19:19,2026-06-03 17:45:53
+113,Hélice de Alumínio 1281,Hélice 3 pás para motor de popa,7,11,75681256,UN,TRUE,2026-11-18 10:56:22,2026-11-25 07:49:16
+114,Tinta Antifouling 3228,Tinta antiincrustante 3.6L para casco,3,4,32641501,L,TRUE,2021-03-18 13:59:24,2023-10-19 00:34:12
+115,Bateria Náutica 8635,Bateria estacionária 105Ah náutica,6,11,67238862,UN,TRUE,2022-05-10 00:08:06,2026-06-28 22:38:13
+116,Colete Salva-Vidas 280,Colete homologado classe III,9,8,17505125,UN,TRUE,2020-08-28 23:55:02,2021-11-10 19:38:09
+117,Sonar Transducer 869,Transdutor de sonar para profundidade,5,9,48835718,UN,TRUE,2021-01-13 15:20:30,2026-12-14 11:59:42
+118,Vela Mestra 5825,Vela mestra em dacron para veleiros 32 pés,9,14,78963334,UN,TRUE,2020-06-02 06:44:18,2020-10-10 23:49:59
+119,Motor de Popa 2911,Motor de popa 4 tempos para embarcações de lazer,12,7,37112742,UN,TRUE,2024-02-23 22:19:02,2026-11-08 15:06:15
+120,Motor de Popa 8681,Motor de popa 4 tempos para embarcações de lazer,5,2,72151121,UN,TRUE,2020-02-19 04:11:02,2022-12-20 13:20:44
+121,GPS Plotter 1152,GPS chartplotter com cartografia,7,14,33353535,UN,TRUE,2023-02-13 03:42:04,2025-05-22 13:45:30
+122,Vela Mestra 7742,Vela mestra em dacron para veleiros 32 pés,4,7,93581343,UN,TRUE,2024-07-26 09:15:39,2025-03-10 12:37:43
+123,Bateria Náutica 6577,Bateria estacionária 105Ah náutica,6,13,47054948,UN,TRUE,2024-05-27 14:28:10,2024-09-03 20:06:44
+124,Âncora Bruce 9985,Âncora de garra tipo Bruce em aço galvanizado,11,4,22176821,UN,TRUE,2021-09-27 01:27:23,2024-04-11 23:26:56
+125,Âncora Bruce 9236,Âncora de garra tipo Bruce em aço galvanizado,8,14,93062294,UN,TRUE,2020-01-08 23:13:57,2026-08-10 07:16:45
+126,Hélice de Alumínio 9713,Hélice 3 pás para motor de popa,12,10,84517271,UN,TRUE,2025-01-20 12:03:24,2026-02-22 11:19:30
+127,Defensa Náutica 6521,Defensa cilíndrica em PVC,8,10,30757790,PC,TRUE,2025-08-18 03:42:12,2026-10-20 05:19:08
+128,Cabo Náutico 7174,Cabo de polipropileno trançado,6,8,39856733,M,TRUE,2021-09-04 10:02:02,2025-03-14 04:33:34
+129,Defensa Náutica 4517,Defensa cilíndrica em PVC,1,10,43783129,PC,TRUE,2020-01-05 16:52:52,2026-06-25 10:31:46
+130,Tinta Antifouling 9285,Tinta antiincrustante 3.6L para casco,1,13,11241322,L,TRUE,2022-09-03 18:42:43,2023-02-26 11:24:05
+131,Âncora Bruce 7031,Âncora de garra tipo Bruce em aço galvanizado,5,1,70800144,UN,TRUE,2025-01-27 04:02:41,2026-06-18 20:47:13
+132,Tinta Antifouling 7287,Tinta antiincrustante 3.6L para casco,6,11,24414511,L,TRUE,2026-11-25 07:57:55,2026-12-21 09:51:14
+133,Âncora Bruce 7309,Âncora de garra tipo Bruce em aço galvanizado,10,12,19667984,UN,TRUE,2021-03-12 03:41:52,2024-12-29 02:18:59
+134,Cabo Náutico 5788,Cabo de polipropileno trançado,5,2,55373450,M,TRUE,2024-07-09 19:13:52,2024-07-28 10:51:51
+135,GPS Plotter 3319,GPS chartplotter com cartografia,6,2,51515748,UN,TRUE,2022-10-23 00:29:58,2026-02-12 04:21:05
+136,Colete Salva-Vidas 9822,Colete homologado classe III,4,13,12145016,UN,TRUE,2026-10-30 02:07:18,2026-11-16 12:51:59
+137,Motor de Popa 8544,Motor de popa 4 tempos para embarcações de lazer,11,10,91371416,UN,TRUE,2023-03-26 17:53:42,2026-03-29 11:08:19
+138,Cabo Náutico 3217,Cabo de polipropileno trançado,8,2,87710436,M,TRUE,2023-09-01 22:36:46,2026-07-04 05:15:43
+139,Sonar Transducer 7171,Transdutor de sonar para profundidade,10,5,41386041,UN,TRUE,2024-07-18 11:30:06,2025-05-01 02:00:31
+140,Bússola de Bordo 5528,Bússola magnética líquida com iluminação,11,7,88384276,UN,TRUE,2024-10-28 16:34:33,2026-03-09 00:45:37
+141,Motor de Popa 5440,Motor de popa 4 tempos para embarcações de lazer,5,4,96711406,UN,FALSE,2025-04-21 11:47:08,2025-08-31 07:12:31
+142,Cabo Náutico 3932,Cabo de polipropileno trançado,10,7,89277433,M,TRUE,2025-08-27 03:14:47,2026-01-30 15:08:35
+143,Tinta Antifouling 849,Tinta antiincrustante 3.6L para casco,9,2,11159458,L,TRUE,2020-11-03 17:49:25,2024-07-17 14:06:03
+144,Vela Mestra 7171,Vela mestra em dacron para veleiros 32 pés,11,11,40194566,UN,TRUE,2024-02-15 08:19:36,2025-02-04 00:17:43
+145,Sonar Transducer 1176,Transdutor de sonar para profundidade,4,8,39299173,UN,TRUE,2021-12-01 15:20:34,2023-08-06 13:57:17
+146,Cabo Náutico 7323,Cabo de polipropileno trançado,6,2,10813652,M,TRUE,2026-10-30 06:39:37,2026-12-29 21:53:20
+147,Motor de Popa 1923,Motor de popa 4 tempos para embarcações de lazer,7,10,45121469,UN,TRUE,2023-09-24 15:01:14,2025-02-05 14:38:38
+148,Colete Salva-Vidas 8269,Colete homologado classe III,6,9,78082384,UN,TRUE,2022-11-28 21:48:37,2023-04-08 04:48:13
+149,Bateria Náutica 948,Bateria estacionária 105Ah náutica,7,3,32948149,UN,TRUE,2025-04-11 03:21:47,2026-03-15 18:43:57
+150,Defensa Náutica 2783,Defensa cilíndrica em PVC,10,13,76325224,PC,FALSE,2026-12-17 14:49:08,2026-12-30 00:31:24
+151,Hélice de Alumínio 7225,Hélice 3 pás para motor de popa,2,8,65552323,UN,TRUE,2020-05-17 19:03:42,2024-12-08 17:11:37
+152,Caboo Náutico 4942,Cabo de polipropileno trançado,7,4,28176555,M,TRUE,2023-02-07 10:42:06,2026-09-16 17:24:51
+153,Motor de Popa 9201,Motor de popa 4 tempos para embarcações de lazer,12,2,26334578,UN,TRUE,2026-06-06 01:39:15,2026-08-09 03:33:27
+154,Hélice de Alumínio 549,—,5,11,50637805,UN,TRUE,2022-05-29 09:21:38,2026-07-06 16:46:03
+155,Bateria Náutica 5487,Bateria estacionária 105Ah náutica,12,2,51094549,UN,TRUE,2023-05-09 05:02:36,2026-06-09 02:30:04
+156,GPS Plotter 2111,GPS chartplotter com cartografia,9,6,46389915,UN,TRUE,2022-01-07 13:45:07,2026-05-30 13:25:02
+157,Bússola de Bordo 1248,Bússola magnética líquida com iluminação,3,1,77579048,UN,TRUE,2023-06-23 06:55:40,2023-10-07 07:20:35
+158,Vela Mestra 8056,Vela mestra em dacron para veleiros 32 pés,7,10,71315786,UN,TRUE,2023-12-31 02:29:56,2025-03-23 00:49:34
+159,GPS Plotter 2508,,1,5,46787181,UN,TRUE,2023-10-11 15:19:35,2025-02-26 02:06:14
+160,Tinta Antifouling 901,Tinta antiincrustante 3.6L para casco,9,11,75198356,L,TRUE,2026-07-26 05:14:55,2026-10-18 17:43:17
+161,Bússola de Bordo 5772,Lorem ipsum dolor sit amet.,2,8,79562172,UN,TRUE,2024-02-08 17:15:48,2024-03-02 08:07:56
+162,Bateria Náutica 2654,Bateria estacionária 105Ah náutica,3,4,36899922,UN,TRUE,2023-08-27 00:26:17,2024-12-22 09:28:26
+163,Defensa Náutica 1277,Defensa cilíndrica em PVC,6,9,42987182,PC,TRUE,2026-09-03 20:02:40,2026-12-07 01:45:33
+164,Bateria Náutica 2738,Bateria estacionária 105Ah náutica,1,2,29901192,UN,TRUE,2025-01-24 01:48:10,2026-04-09 12:39:34
+165,GPS Plotter 6840,GPS chartplotter com cartografia,10,12,29649690,UN,TRUE,2021-07-15 00:39:05,2026-09-24 10:48:10
+166,GPS Plotter 7150,GPS chartplotter com cartografia,5,5,93161278,UN,TRUE,2020-09-07 04:05:43,2021-06-06 16:27:52
+167,GPS Plotter 2659,GPS chartplotter com cartografia,5,5,21885920,UN,TRUE,2023-03-16 08:07:37,2025-05-23 02:45:50
+168,Âncora Bruce 7525,,8,10,58857930,UN,TRUE,2023-04-25 16:11:32,2024-12-24 16:44:40
+169,Hélice de Alumínio 1674,Hélice 3 pás para motor de popa,1,2,98669716,UN,TRUE,2022-04-27 21:25:59,2025-11-28 19:16:52
+170,Bateria Náutica 834,Bateria estacionária 105Ah náutica,1,9,32283281,UN,TRUE,2020-11-14 01:31:00,2022-08-12 11:55:37
+171,Motor de Popa 6225,Motor de popa 4 tempos para embarcações de lazer,6,13,24291072,UN,TRUE,2023-08-29 07:00:21,2025-08-06 05:39:15
+172,Defensa Náutica 2684,Defensa cilíndrica em PVC,2,5,80680590,PC,TRUE,2024-06-16 08:00:54,2025-08-05 19:17:15
+173,Bateria Náutica 2569,Bateria estacionária 105Ah náutica,4,8,85205934,UN,TRUE,2020-06-27 23:52:12,2020-11-30 02:56:50
+174,Bússola de Bordo 755,Bússola magnética líquida com iluminação,4,5,49052504,UN,TRUE,2025-07-20 23:55:55,2026-04-08 14:35:07
+175,Hélice de Alumínio 7706,Hélice 3 pás para motor de popa,6,1,23185993,UN,TRUE,2026-05-20 00:14:05,2026-09-26 03:27:05
+176,Vela Mestra 1834,Vela mestra em dacron para veleiros 32 pés,7,12,28442224,UN,TRUE,2025-03-06 22:43:14,2026-02-21 21:37:28
+177,GPS Plotter 8413,GPS chartplotter com cartografia,9,7,62387423,UN,TRUE,2021-11-22 04:42:58,2022-04-24 15:51:30
+178,Cabo Náutico 6215,Cabo de polipropileno trançado,10,3,29162115,M,TRUE,2023-01-16 21:38:00,2024-11-12 17:38:01
+179,Bateria Náutica 4055,Bateria estacionária 105Ah náutica,4,10,63616516,UN,TRUE,2021-08-03 01:18:50,2023-03-11 22:27:52
+180,Motor de Popa 1949,Motor de popa 4 tempos para embarcações de lazer,7,13,22146679,UN,TRUE,2024-11-01 07:14:54,2024-11-10 04:23:05
+181,Bateria Náutica 7848,Bateria estacionária 105Ah náutica,3,11,64239440,UN,TRUE,2022-02-17 07:47:37,2022-09-11 14:46:50
+182,Vela Mestra 3395,Vela mestra em dacron para veleiros 32 pés,2,12,61980660,UN,TRUE,2024-09-20 05:01:23,2024-10-28 08:40:18
+183,Cabo Náutico 394,Cabo de polipropileno trançado,1,3,26544865,M,TRUE,2020-01-29 17:22:33,2026-11-09 17:42:18
+184,Tinta Antifouling 8753,Tinta antiincrustante 3.6L para casco,3,5,51333598,L,TRUE,2026-10-31 14:17:37,2026-12-09 07:45:27
+185,Motor de Popa 2690,Motor de popa 4 tempos para embarcações de lazer,1,8,53678429,UN,TRUE,2026-11-17 00:12:24,2026-11-19 02:53:35
+186,Motor de Popa 4710,Motor de popa 4 tempos para embarcações de lazer,2,1,75430794,UN,TRUE,2022-11-07 05:53:52,2023-02-15 00:56:45
+187,asdf,Defensa cilíndrica em PVC,12,10,17916578,PC,TRUE,2022-05-13 14:11:50,2023-09-09 02:20:19
+188,Sonar Transducer 9366,Transdutor de sonar para profundidade,5,13,73809871,UN,TRUE,2021-02-20 11:59:53,2023-05-30 17:12:00
+189,Cabo Náutico 8341,Cabo de polipropileno trançado,2,14,48723755,M,TRUE,2021-05-26 22:23:40,2024-01-20 04:32:58
+190,GPS Plotter 3107,GPS chartplotter com cartografia,9,4,95845129,UN,TRUE,2023-06-04 14:31:13,2023-08-28 18:39:31
+191,Bússola de Bordo 8959,Bússola magnética líquida com iluminação,4,9,48478702,UN,TRUE,2022-07-15 09:33:06,2023-11-20 14:49:54
+192,GPS Plotter 649,GPS chartplotter com cartografia,6,12,67924889,UN,TRUE,2021-11-21 14:42:20,2026-02-06 15:29:02
+193,Cabo Náutico 8225,Cabo de polipropileno trançado,1,14,17028124,M,TRUE,2024-07-11 08:42:14,2025-12-11 03:15:14
+194,Hélice de Alumínio 7846,Hélice 3 pás para motor de popa,1,7,75771245,UN,TRUE,2023-11-09 22:17:01,2026-10-16 00:38:05
+195,Bateria Náutica 4683,Bateria estacionária 105Ah náutica,4,4,31525726,UN,TRUE,2024-10-10 20:09:37,2026-10-15 13:14:28
+196,Colete Salva-Vidas 9616,Colete homologado classe III,4,9,81525665,UN,TRUE,2024-01-09 18:39:59,2024-11-09 20:27:57
+197,Motor de Popa 2175,Motor de popa 4 tempos para embarcações de lazer,9,8,87538150,UN,TRUE,2022-07-27 13:06:59,2022-10-14 04:46:25
+198,Hélice de Alumínio 8067,Hélice 3 pás para motor de popa,7,1,84790829,UN,TRUE,2024-07-29 17:42:30,2025-11-16 04:14:22
+199,Colete Salva-Vidas 2755,Colete homologado classe III,4,3,31145170,UN,FALSE,2025-02-24 01:03:07,2026-03-04 17:20:23
+200,Tinta Antifouling 4777,Tinta antiincrustante 3.6L para casco,7,7,35420386,L,TRUE,2025-03-27 07:19:46,2025-10-22 13:00:35
+201,Sonar Transducer 2387,Transdutor de sonar para profundidade,2,1,38238316,UN,TRUE,2025-11-30 01:41:50,2026-01-17 11:45:16
+202,Cabo Náutico 5453,Cabo de polipropileno trançado,11,11,78577508,M,TRUE,2025-08-14 14:45:11,2025-09-19 01:33:47
+203,Sonar Transducer 1690,Transdutor de sonar para profundidade,4,3,70729293,UN,TRUE,2021-11-13 18:44:23,2024-12-16 15:47:36
+204,Sonar Transducer 7487,Transdutor de sonar para profundidade,12,5,62581636,UN,TRUE,2026-02-19 22:53:51,2026-07-24 15:24:18
+205,Cabo Náutico 6267,Cabo de polipropileno trançado,7,8,16057494,M,TRUE,2021-03-04 19:41:05,2025-06-03 02:33:57
+206,Âncora Bruce 6320,Âncora de garra tipo Bruce em aço galvanizado,5,1,68838566,UN,TRUE,2023-08-03 20:03:19,2024-09-24 07:18:25
+207,Tinta Antifouling 179,,6,12,42483629,L,TRUE,2026-10-06 02:55:04,2026-12-14 15:52:02
+208,Motor de Popa 9560,Motor de popa 4 tempos para embarcações de lazer,4,8,98022399,UN,TRUE,2022-03-21 23:44:06,2026-05-16 10:55:09
+209,Cabo Náutico 7626,Cabo de polipropileno trançado,11,13,28522396,M,TRUE,2026-04-10 08:20:20,2026-05-05 22:29:43
+210,João da Silva,Motor de popa 4 tempos para embarcações de lazer,11,1,62494419,UN,TRUE,2022-09-13 22:50:45,2024-12-04 21:33:53
+211,Cabo Náutico 9796,Cabo de polipropileno trançado,11,6,37653017,M,TRUE,2022-04-06 08:17:01,2022-07-09 12:35:22
+212,Sonar Transducer 594,Transdutor de sonar para profundidade,8,2,77764415,UN,TRUE,2022-07-14 22:16:37,2022-09-04 03:28:38
+213,Tinta Antifouling 8939,Tinta antiincrustante 3.6L para casco,8,6,73953631,L,TRUE,2023-09-02 00:06:49,2024-11-19 09:09:00
+214,Hélice de Alumínio 8208,Hélice 3 pás para motor de popa,7,3,75088020,UN,TRUE,2025-03-18 10:30:04,2025-08-07 17:53:40
+215,Âncora Bruce 3775,Âncora de garra tipo Bruce em aço galvanizado,9,2,54730543,UN,TRUE,2021-05-10 10:14:14,2026-03-13 05:39:34
+216,Âncora Bruce 1018,Âncora de garra tipo Bruce em aço galvanizado,8,5,17546850,UN,TRUE,2022-09-11 15:11:38,2026-05-30 10:44:44
+217,Bateria Náutica 5611,Bateria estacionária 105Ah náutica,7,9,74154777,UN,TRUE,2026-10-09 21:20:22,2026-10-19 20:20:28
+218,Bússola de Bordo 4059,Bússola magnética líquida com iluminação,8,12,10365568,UN,TRUE,2024-11-12 09:54:52,2024-11-28 09:24:15
+219,Colete Salva-Vidas 502,Colete homologado classe III,12,10,84507814,UN,TRUE,2020-11-12 21:43:15,2024-12-11 10:06:09
+220,Tinta Antifouling 5225,Tinta antiincrustante 3.6L para casco,3,8,81487543,L,TRUE,2024-07-06 06:17:27,2024-12-23 11:12:36
+221,Sonar Transducer 4498,TODO: add description,7,10,30675315,UN,TRUE,2025-07-30 06:46:21,2026-10-09 09:35:12
+222,GPS Plotter 4088,GPS chartplotter com cartografia,5,12,61991625,UN,TRUE,2025-12-10 18:23:58,2026-05-06 04:11:07
+223,GPS Plotter 582,GPS chartplotter com cartografia,1,2,71439279,UN,TRUE,2020-06-14 19:35:30,2023-10-09 11:14:43
+224,Tinta Antifouling 1614,Tinta antiincrustante 3.6L para casco,8,12,10174302,L,TRUE,2025-02-14 15:58:00,2026-03-24 11:08:45
+225,Âncora Bruce 7480,Âncora de garra tipo Bruce em aço galvanizado,7,14,23092404,UN,TRUE,2023-02-26 13:28:03,2023-05-13 00:42:10
+226,Hélice de Alumínio 3756,Hélice 3 pás para motor de popa,9,3,47663384,UN,TRUE,2025-07-22 10:56:46,2026-03-02 01:53:18
+227,Colete Salva-Vidas 3392,Colete homologado classe III,3,3,56370670,UN,TRUE,2023-01-07 07:51:10,2026-12-29 13:56:02
+228,Defensa Náutica 9651,Defensa cilíndrica em PVC,11,8,96900780,PC,TRUE,2021-01-27 01:58:22,2026-01-10 11:05:37
+229,Bateria Náutica 5653,Bateria estacionária 105Ah náutica,5,4,41045712,UN,TRUE,2020-12-17 06:13:46,2026-04-05 10:11:16
+230,Bússola de Bordo 4361,Bússola magnética líquida com iluminação,9,14,88752907,UN,TRUE,2020-01-15 19:21:14,2024-12-05 10:40:22
+231,GPS Plotter 6626,GPS chartplotter com cartografia,11,8,29469039,UN,TRUE,2020-04-02 10:07:37,2023-04-04 01:09:05
+232,Hélice de Alumínio 5784,Hélice 3 pás para motor de popa,6,3,68236590,UN,TRUE,2025-01-12 18:48:58,2025-11-05 09:07:18
+233,Bateria Náutica 6163,Bateria estacionária 105Ah náutica,1,7,24051629,UN,TRUE,2022-09-20 10:04:01,2024-07-08 06:41:36
+234,Defensa Náutica 417,Defensa cilíndrica em PVC,3,3,13276834,PC,TRUE,2024-10-09 18:33:32,2024-10-30 18:40:39
+235,GPS Plotter 1842,GPS chartplotter com cartografia,5,7,41294838,UN,TRUE,2022-05-29 02:16:28,2024-05-18 07:54:54
+236,Bateria Náutica 9272,Bateria estacionária 105Ah náutica,5,3,94401105,UN,TRUE,2020-04-22 01:04:05,2026-09-21 07:42:05
+237,Cabo Náutico 9307,Cabo de polipropileno trançado,11,14,37359825,M,TRUE,2025-11-11 03:21:13,2026-08-02 17:22:12
+238,Motor de Popa 4350,Motor de popa 4 tempos para embarcações de lazer,11,5,84676560,UN,TRUE,2021-03-14 09:27:32,2022-01-04 18:45:17
+239,Colete Salva-Vidas 326,Colete homologado classe III,2,13,22699766,UN,FALSE,2020-02-23 08:17:01,2022-11-19 19:51:19
+240,Bússola de Bordo 702,Bússola magnética líquida com iluminação,8,7,91287147,UN,TRUE,2026-06-22 00:02:10,2026-11-18 21:03:07
+241,Defensa Náutica 5179,Defensa cilíndrica em PVC,11,12,17655078,PC,TRUE,2024-08-20 00:09:57,2025-07-22 14:41:10
+242,Âncora Bruce 7665,Âncora de garra tipo Bruce em aço galvanizado,3,3,14312569,UN,TRUE,2026-09-03 19:58:14,2026-12-29 15:55:35
+243,Bússola de Bordo 994,Bússola magnética líquida com iluminação,6,14,79475958,UN,TRUE,2026-12-20 12:40:00,2026-12-22 12:48:14
+244,Sonar Transducer 6595,Transdutor de sonar para profundidade,11,10,32140446,UN,TRUE,2024-10-21 07:22:19,2024-12-04 20:03:43
+245,Cabo Náutico 7064,Cabo de polipropileno trançado,7,13,69589540,M,TRUE,2023-04-18 15:43:54,2023-12-14 19:25:48
+246,Motor de Popa 1365,Motor de popa 4 tempos para embarcações de lazer,3,1,71926724,UN,TRUE,2025-04-28 04:47:18,2026-09-01 21:34:17
+247,Defensa Náutica 7459,Defensa cilíndrica em PVC,8,8,31735528,PC,TRUE,2021-01-11 11:28:52,2024-12-18 18:54:41
+248,Tinta Antifouling 3953,Tinta antiincrustante 3.6L para casco,12,10,45909769,L,TRUE,2026-03-29 20:48:34,2026-11-10 06:56:28
+249,Motor de Popa 1606,Motor de popa 4 tempos para embarcações de lazer,1,12,16339897,UN,TRUE,2023-08-17 13:16:21,2025-10-29 02:18:10
+250,Hélice de Alumínio 8577,Hélice 3 pás para motor de popa,3,7,96732444,UN,TRUE,2022-05-29 12:04:46,2025-02-01 02:58:25
+251,Motor de Popa 6346,Motor de popa 4 tempos para embarcações de lazer,1,7,23107503,UN,TRUE,2020-12-05 22:02:03,2026-01-08 22:16:27
+252,Defensa Náutica 9558,Defensa cilíndrica em PVC,1,4,10280205,PC,TRUE,2023-06-15 12:30:33,2025-03-31 17:51:39
+253,Bússola de Bordo 3611,Bússola magnética líquida com iluminação,5,3,23997150,UN,TRUE,2021-02-19 12:48:43,2024-07-25 05:17:54
+254,Bússola de Bordo 7825,Bússola magnética líquida com iluminação,3,5,95190955,UN,TRUE,2023-09-11 04:42:13,2025-09-14 00:50:54
+255,Sonar Transducer 5593,Transdutor de sonar para profundidade,12,14,67435480,UN,TRUE,2020-01-25 12:34:42,2021-06-21 21:12:13
+256,Tinta Antifouling 866,Tinta antiincrustante 3.6L para casco,4,10,25451923,L,TRUE,2022-03-01 18:58:35,2024-08-07 10:01:03
+257,Colete Salva-Vidas 8800,Colete homologado classe III,8,4,98613446,UN,TRUE,2022-02-06 15:49:44,2024-04-25 12:12:44
+258,Bateria Náutica 5523,Bateria estacionária 105Ah náutica,7,9,74520915,UN,TRUE,2025-07-09 21:46:22,2026-05-04 22:49:28
+259,Bússola de Bordo 5451,Bússola magnética líquida com iluminação,2,14,16599321,UN,TRUE,2021-07-19 12:14:27,2026-12-21 21:51:11
+260,Cliente Genérico,Vela mestra em dacron para veleiros 32 pés,2,10,44693241,UN,TRUE,2023-07-20 03:41:25,2024-05-02 13:29:53
+261,Âncora Bruce 7226,Âncora de garra tipo Bruce em aço galvanizado,1,4,37927628,UN,TRUE,2025-04-21 18:23:42,2026-10-10 12:03:01
+262,Hélice de Alumínio 9192,Hélice 3 pás para motor de popa,1,12,61152405,UN,TRUE,2020-11-23 20:11:13,2020-12-20 16:08:37
+263,Tinta Antifouling 3557,Tinta antiincrustante 3.6L para casco,1,10,93480532,L,TRUE,2026-07-25 06:04:29,2026-08-27 02:13:57
+264,Bateria Náutica 1358,Bateria estacionária 105Ah náutica,9,13,47625982,UN,TRUE,2024-06-05 20:53:39,2024-06-07 16:31:54
+265,Âncora Bruce 2284,Âncora de garra tipo Bruce em aço galvanizado,9,3,44273867,UN,TRUE,2020-10-04 04:05:49,2021-11-21 01:41:48
+266,Bússola de Bordo 9356,Bússola magnética líquida com iluminação,12,3,34139403,UN,TRUE,2023-08-23 05:02:39,2026-11-20 21:45:18
+267,GPS Plotter 475,GPS chartplotter com cartografia,6,1,42387465,UN,TRUE,2025-01-11 12:32:24,2026-11-05 13:07:28
+268,Motor de Popa 9800,Motor de popa 4 tempos para embarcações de lazer,3,14,38718514,UN,TRUE,2024-09-19 11:28:04,2026-11-06 08:31:46
+269,Bússola de Bordo 1854,Bússola magnética líquida com iluminação,10,6,43643307,UN,TRUE,2025-02-15 09:22:58,2026-04-29 13:05:18
+270,Defensa Náutica 8531,Defensa cilíndrica em PVC,1,10,48407313,PC,TRUE,2021-10-31 09:32:54,2023-02-11 13:39:03
+271,Tinta Antifouling 5976,Tinta antiincrustante 3.6L para casco,2,10,27631932,L,TRUE,2025-04-02 18:48:25,2025-08-27 00:07:50
+272,Cabo Náutico 4571,Cabo de polipropileno trançado,5,11,64210331,M,TRUE,2021-10-21 18:22:41,2023-01-13 22:24:37
+273,Vela Mestra 3325,Vela mestra em dacron para veleiros 32 pés,4,2,80575453,UN,TRUE,2024-01-05 14:19:09,2024-10-27 09:28:53
+274,Tinta Antifouling 5779,Tinta antiincrustante 3.6L para casco,1,8,91314261,L,TRUE,2021-01-07 15:55:44,2023-04-13 05:48:24
+275,Cabo Náutico 5921,Cabo de polipropileno trançado,2,12,65691283,M,TRUE,2024-10-19 05:21:51,2026-04-01 02:13:41
+276,GPS Plotter 4567,GPS chartplotter com cartografia,12,9,30409252,UN,TRUE,2022-01-14 07:33:27,2022-03-13 10:54:46
+277,Cabo Náutico 3697,Cabo de polipropileno trançado,10,3,59674222,M,TRUE,2022-01-10 03:48:29,2023-10-24 08:05:16
+278,Sonar Transducer 5470,Transdutor de sonar para profundidade,12,10,40585357,UN,TRUE,2021-05-14 08:48:58,2023-09-21 14:39:36
+279,Vela Mestra 8447,Vela mestra em dacron para veleiros 32 pés,3,14,47592753,UN,TRUE,2026-12-22 14:36:12,2026-12-31 04:40:05
+280,Defensa Náutica 7532,Defensa cilíndrica em PVC,8,14,23730306,PC,TRUE,2021-10-31 13:31:06,2023-06-30 11:43:07
+281,Vela Mestra 8105,Vela mestra em dacron para veleiros 32 pés,9,5,71546276,UN,TRUE,2025-01-14 10:47:44,2025-04-05 00:00:51
+282,Cabo Náutico 8086,Cabo de polipropileno trançado,5,1,85261382,M,TRUE,2023-10-02 00:33:24,2025-09-22 04:26:21
+283,Defensa Náutica 3209,Defensa cilíndrica em PVC,1,8,93647400,PC,TRUE,2022-04-22 19:53:43,2022-11-16 10:57:55
+284,Bússola de Bordo 7525,,7,5,75583728,UN,TRUE,2023-11-06 05:29:41,2025-02-22 02:01:17
+285,Âncora Bruce 1131,Âncora de garra tipo Bruce em aço galvanizado,6,1,20662250,UN,TRUE,2021-07-20 10:10:14,2022-06-12 19:42:08
+286,Bússola de Bordo 7461,Bússola magnética líquida com iluminação,5,5,15705321,UN,TRUE,2021-08-03 12:19:28,2022-07-30 17:47:24
+287,Âncora Bruce 4980,Âncora de garra tipo Bruce em aço galvanizado,9,5,63040083,UN,TRUE,2024-07-03 10:21:53,2025-08-30 12:50:51
+288,Vela Mestra 5566,Vela mestra em dacron para veleiros 32 pés,8,8,56593785,UN,TRUE,2025-01-18 08:22:14,2026-07-16 20:37:02
+289,Motor de Popa 8515,Motor de popa 4 tempos para embarcações de lazer,9,11,31465311,UN,TRUE,2026-03-03 14:10:59,2026-12-31 22:03:23
+290,Defensa Náutica 6113,Defensa cilíndrica em PVC,4,1,11894235,PC,TRUE,2020-02-13 06:14:10,2025-11-05 07:49:57
+291,GPS Plotter 4422,GPS chartplotter com cartografia,4,8,83012797,UN,TRUE,2026-07-09 14:41:57,2026-09-30 20:29:45
+292,Vela Mestra 7242,Vela mestra em dacron para veleiros 32 pés,8,8,19196102,UN,TRUE,2022-06-10 03:19:50,2026-08-31 07:47:57
+293,GPS Plotter 7173,GPS chartplotter com cartografia,11,13,94083440,UN,TRUE,2021-05-17 13:39:27,2025-06-17 12:10:25
+294,Vela Mestra 5034,Vela mestra em dacron para veleiros 32 pés,5,7,96493154,UN,TRUE,2021-07-18 09:38:46,2022-10-29 22:49:30
+295,Cabo Náutico 2105,Cabo de polipropileno trançado,7,8,96535904,M,TRUE,2021-12-27 16:37:39,2026-01-31 06:36:26
+296,Vela Mestra 9794,Vela mestra em dacron para veleiros 32 pés,10,4,63850364,UN,TRUE,2026-07-28 10:17:59,2026-10-29 11:02:05
+297,Tinta Antifouling 9136,Tinta antiincrustante 3.6L para casco,12,8,16298869,L,TRUE,2020-06-04 11:22:14,2024-08-09 11:41:08
+298,Motor de Popa 2640,Motor de popa 4 tempos para embarcações de lazer,11,4,41321254,UN,TRUE,2024-08-05 05:19:42,2026-06-06 15:31:41
+299,Hélice de Alumínio 9238,Hélice 3 pás para motor de popa,5,13,24924446,UN,FALSE,2022-01-14 12:40:16,2026-03-21 06:15:22
+300,GPS Plotter 7543,GPS chartplotter com cartografia,5,2,53140608,UN,TRUE,2024-12-31 10:22:06,2025-03-14 11:39:50
+301,Bússola de Bordo 4621,Bússola magnética líquida com iluminação,6,8,39174855,UN,TRUE,2022-08-17 02:04:22,2025-03-10 09:08:44
+302,GPS Plotter 9135,GPS chartplotter com cartografia,9,7,47838717,UN,TRUE,2021-08-22 19:08:42,2024-09-22 17:05:34
+303,Bússola de Bordo 7024,Bússola magnética líquida com iluminação,6,2,92372356,UN,TRUE,2024-10-25 01:29:29,2026-01-29 06:55:14
+304,Hélice de Alumínio 7333,Hélice 3 pás para motor de popa,8,3,13869626,UN,TRUE,2026-04-12 08:59:23,2026-12-25 03:21:10
+305,Bateria Náutica 5556,Bateria estacionária 105Ah náutica,2,11,62713640,UN,TRUE,2021-11-23 04:59:30,2022-09-19 10:27:39
+306,Cabo Náutico 9175,Cabo de polipropileno trançado,3,5,48093139,M,TRUE,2022-12-24 13:29:39,2023-12-06 05:16:00
+307,Vela Mestra 6857,Vela mestra em dacron para veleiros 32 pés,2,5,99797994,UN,TRUE,2022-06-01 04:59:55,2026-03-29 21:36:27
+308,Motor de Popa 1540,Motor de popa 4 tempos para embarcações de lazer,7,9,53823373,UN,TRUE,2021-10-09 08:13:19,2022-02-03 14:25:49
+309,Motor de Popa 4415,Motor de popa 4 tempos para embarcações de lazer,6,12,19330662,UN,TRUE,2021-10-02 20:11:05,2021-12-10 17:39:24
+310,Vela Mestra 8489,Vela mestra em dacron para veleiros 32 pés,6,4,96941724,UN,TRUE,2023-01-20 10:29:15,2026-10-18 12:10:11
+311,GPS Plotter 2249,GPS chartplotter com cartografia,9,8,79004343,UN,TRUE,2025-10-17 13:37:55,2026-10-28 04:09:41
+312,Âncora Bruce 831,Âncora de garra tipo Bruce em aço galvanizado,5,11,97383668,UN,TRUE,2021-03-31 07:11:46,2021-04-26 16:53:50
+313,Colete Salva-Vidas 3456,Colete homologado classe III,1,6,85931561,UN,TRUE,2023-02-11 12:04:07,2025-12-25 10:39:01
+314,Tinta Antifouling 2982,Tinta antiincrustante 3.6L para casco,5,12,95666107,L,TRUE,2021-06-14 02:02:11,2025-01-27 19:30:21
+315,Defensa Náutica 2949,Defensa cilíndrica em PVC,4,6,59372387,PC,TRUE,2024-10-07 06:51:55,2026-02-06 09:36:11
+316,Cabo Náutico 6564,Cabo de polipropileno trançado,9,5,89348467,M,TRUE,2022-09-23 19:26:34,2023-02-28 11:30:57
+317,Defensa Náutica 3153,Defensa cilíndrica em PVC,2,2,35688444,PC,TRUE,2023-07-03 05:41:42,2024-10-14 04:06:42
+318,Defensa Náutica 6926,Defensa cilíndrica em PVC,3,1,12085418,PC,TRUE,2022-10-30 09:37:49,2023-05-02 20:43:16
+319,Defensa Náutica 8553,Defensa cilíndrica em PVC,6,14,74134688,PC,TRUE,2022-01-05 09:27:59,2024-08-28 07:19:22
+320,Colete Salva-Vidas 7959,,11,4,74335603,UN,TRUE,2024-05-31 00:27:32,2026-02-26 02:26:22
+321,Colete Salva-Vidas 7573,Colete homologado classe III,5,6,37566276,UN,TRUE,2024-09-22 22:15:08,2025-12-11 17:24:54
+322,Bateria Náutica 2619,Bateria estacionária 105Ah náutica,5,7,69535726,UN,TRUE,2026-04-30 06:49:06,2026-12-01 00:32:16
+323,Âncora Bruce 7053,Âncora de garra tipo Bruce em aço galvanizado,4,3,88471323,UN,TRUE,2022-01-20 08:30:10,2024-03-21 23:50:13
+324,Colete Salva-Vidas 5603,Colete homologado classe III,10,6,67292394,UN,TRUE,2022-07-07 10:31:14,2023-05-07 14:30:35
+325,Âncora Bruce 5388,Âncora de garra tipo Bruce em aço galvanizado,11,5,50750897,UN,TRUE,2020-05-12 12:56:34,2022-06-08 11:56:57
+326,Defensa Náutica 824,Defensa cilíndrica em PVC,4,14,54959077,PC,TRUE,2024-08-23 19:52:44,2024-10-07 17:34:07
+327,Sonar Transducer 4970,Transdutor de sonar para profundidade,12,1,99253380,UN,TRUE,2026-08-03 19:08:26,2026-12-16 09:56:34
+328,Vela Mestra 8368,Vela mestra em dacron para veleiros 32 pés,10,5,79749297,UN,TRUE,2020-03-27 06:34:48,2022-05-21 14:07:32
+329,Colete Salva-Vidas 3098,Colete homologado classe III,9,5,56405625,UN,TRUE,2025-04-28 16:50:25,2026-08-29 20:51:11
+330,Bússola de Bordo 4659,Bússola magnética líquida com iluminação,9,6,81088863,UN,TRUE,2024-11-17 05:15:35,2025-06-12 13:48:05
+331,Bateria Náutica 5936,Bateria estacionária 105Ah náutica,1,5,15478544,UN,TRUE,2020-10-19 05:52:05,2024-05-18 05:00:41
+332,Bateria Náutica 9527,Bateria estacionária 105Ah náutica,2,5,86608788,UN,TRUE,2022-02-20 22:44:06,2023-05-22 20:55:29
+333,Bússola de Bordo 180,Bússola magnética líquida com iluminação,2,5,28986916,UN,TRUE,2022-02-28 12:28:36,2026-01-01 12:24:00
+334,Tinta Antifouling 3404,Tinta antiincrustante 3.6L para casco,7,7,19995161,L,TRUE,2025-03-12 19:14:04,2026-06-21 05:16:51
+335,Vela Mestra 8049,Vela mestra em dacron para veleiros 32 pés,12,11,86149733,UN,TRUE,2023-06-17 07:30:58,2026-08-30 05:45:50
+336,Bateria Náutica 2400,Bateria estacionária 105Ah náutica,5,1,44078473,UN,TRUE,2025-02-13 11:27:22,2025-07-19 20:45:04
+337,Cabo Náutico 9048,Cabo de polipropileno trançado,7,6,65984906,M,TRUE,2020-06-06 19:39:07,2024-07-15 21:15:38
+338,Cabo Náutico 5724,Cabo de polipropileno trançado,10,8,12126860,M,TRUE,2024-12-24 17:34:55,2026-07-17 01:48:10
+339,Sonar Transducer 6256,Transdutor de sonar para profundidade,6,9,70968357,UN,TRUE,2023-10-29 16:44:58,2026-05-03 04:00:14
+340,GPS Pltoter 3205,GPS chartplotter com cartografia,3,14,59533228,UN,TRUE,2025-06-25 11:16:44,2026-08-10 18:18:02
+341,Vela Mestra 7122,,1,12,13703585,UN,TRUE,2022-07-26 10:24:01,2023-04-19 04:19:50
+342,asdf,Cabo de polipropileno trançado,10,12,75867902,M,TRUE,2020-03-16 12:14:11,2020-04-25 08:36:42
+343,Bússola de Bordo 2338,Bússola magnética líquida com iluminação,7,11,39411903,UN,TRUE,2024-01-08 07:19:55,2026-11-30 07:43:18
+344,Âncora Bruce 3286,Âncora de garra tipo Bruce em aço galvanizado,5,13,51509934,UN,TRUE,2020-10-20 05:08:06,2021-06-22 06:12:01
+345,Vela Mestra 1741,Vela mestra em dacron para veleiros 32 pés,11,7,57891714,UN,TRUE,2022-10-17 08:35:48,2024-08-08 01:20:47
+346,GPS Plotter 830,GPS chartplotter com cartografia,6,7,20957471,UN,TRUE,2024-12-13 02:23:24,2026-09-20 17:58:40
+347,Bússola de Bordo 9956,Bússola magnética líquida com iluminação,7,4,29194132,UN,TRUE,2024-11-17 01:10:05,2026-09-28 16:01:59
+348,Âncora Bruce 1231,Âncora de garra tipo Bruce em aço galvanizado,1,1,24531080,UN,TRUE,2024-04-27 09:37:51,2024-05-16 10:06:03
+349,Bateria Náutica 5090,Bateria estacionária 105Ah náutica,12,2,12959922,UN,TRUE,2023-02-19 19:55:32,2025-10-01 21:15:56
+350,Motor de Popa 1007,Motor de popa 4 tempos para embarcações de lazer,10,14,95531163,UN,TRUE,2020-09-29 19:06:02,2022-02-18 02:08:04
+351,GPS Plotter 845,GPS chartplotter com cartografia,8,14,86152349,UN,TRUE,2020-06-02 13:36:18,2021-01-07 16:04:32
+352,Âncora Bruce 7571,Âncora de garra tipo Bruce em aço galvanizado,9,1,83914891,UN,TRUE,2024-10-10 00:30:26,2024-12-16 04:38:37
+353,Cabo Náutico 2862,Cabo de polipropileno trançado,8,8,28443192,M,TRUE,2024-10-27 11:40:48,2026-05-07 02:50:04
+354,Bússola de Bordo 1372,Bússola magnética líquida com iluminação,12,5,21490399,UN,TRUE,2022-03-14 00:38:11,2026-07-13 12:13:45
+355,Cabo Náutico 1755,Cabo de polipropileno trançado,5,2,21481227,M,TRUE,2020-04-25 11:49:32,2021-05-05 01:19:09
+356,Vela Mestra 1319,Vela mestra em dacron para veleiros 32 pés,9,12,83264849,UN,TRUE,2020-02-23 17:08:01,2022-05-19 02:46:02
+357,NAO INFORMADO,Bússola magnética líquida com iluminação,9,7,31350953,UN,TRUE,2023-08-26 23:20:14,2026-04-15 20:56:28
+358,Motor de Popa 553,Motor de popa 4 tempos para embarcações de lazer,1,8,24441355,UN,TRUE,2024-12-24 07:53:46,2026-04-11 05:24:55
+359,Hélice de Alumínio 8562,Hélice 3 pás para motor de popa,2,2,69666237,UN,TRUE,2026-02-06 21:01:34,2026-11-14 12:41:24
+360,Bateria Náutica 2558,Bateria estacionária 105Ah náutica,6,7,69253387,UN,TRUE,2024-07-18 00:53:05,2024-11-11 04:55:26
+361,Bússola de Bordo 3152,Bússola magnética líquida com iluminação,8,11,39704644,UN,FALSE,2024-11-16 06:33:02,2026-02-28 07:13:28
+362,Âncora Bruce 3524,Âncora de garra tipo Bruce em aço galvanizado,7,12,16726627,UN,TRUE,2023-11-27 13:35:22,2025-04-27 06:23:35
+363,Motor de Popa 1279,Motor de popa 4 tempos para embarcações de lazer,11,3,63487199,UN,TRUE,2025-06-11 13:42:51,2026-02-27 19:26:26
+364,Vela Mestra 4634,Vela mestra em dacron para veleiros 32 pés,7,3,78190172,UN,TRUE,2020-06-13 07:28:49,2021-10-05 23:40:59
+365,Sonar Transducer 455,Transdutor de sonar para profundidade,9,11,20088133,UN,TRUE,2020-11-06 10:27:25,2020-11-12 17:46:15
+366,Bússola de Bordo 1762,Bússola magnética líquida com iluminação,9,6,14959814,UN,TRUE,2026-04-25 08:34:21,2026-07-24 23:48:40
+367,Sonar Transducer 4574,Transdutor de sonar para profundidade,3,3,47798201,UN,TRUE,2021-06-21 01:32:47,2021-09-13 07:32:16
+368,Cabo Náutico 7039,Cabo de polipropileno trançado,2,11,18866604,M,TRUE,2021-07-12 06:01:07,2026-08-29 10:49:44
+369,Hélice de Alumínio 393,,9,3,96313230,UN,TRUE,2025-01-21 07:24:01,2026-09-11 20:42:43
+370,Tinta Antifouling 5865,Tinta antiincrustante 3.6L para casco,10,6,94493891,L,TRUE,2025-08-20 07:57:38,2026-05-30 20:08:44
+371,Motor de Popa 4088,Motor de popa 4 tempos para embarcações de lazer,11,7,71965261,UN,TRUE,2024-04-26 03:11:15,2026-04-11 13:44:17
+372,Vela Mestra 500,Vela mestra em dacron para veleiros 32 pés,9,13,20354506,UN,TRUE,2023-07-31 03:46:43,2026-08-01 15:25:54
+373,Cabo Náutico 2300,Cabo de polipropileno trançado,2,2,42788693,M,TRUE,2026-09-22 04:21:24,2026-10-17 07:44:25
+374,Âncora Bruce 9527,Âncora de garra tipo Bruce em aço galvanizado,7,11,62684446,UN,TRUE,2026-02-15 04:07:38,2026-11-11 18:21:15
+375,Sonar Transducer 3481,Transdutor de sonar para profundidade,6,2,16912082,UN,TRUE,2022-10-04 22:50:19,2023-06-04 09:50:08
+376,Defensa Náutica 7831,Defensa cilíndrica em PVC,6,6,48310348,PC,TRUE,2024-04-21 03:07:51,2026-01-12 16:03:07
+377,Cabo Náutico 5117,Cabo de polipropileno trançado,7,8,35306823,M,TRUE,2021-08-06 11:26:42,2025-04-05 02:56:36
+378,Cabo Náutico 5157,Cabo de polipropileno trançado,6,11,30325557,M,TRUE,2023-08-24 08:23:31,2025-05-28 09:25:00
+379,Bateria Náutica 3343,Bateria estacionária 105Ah náutica,1,6,80032637,UN,TRUE,2021-04-22 14:31:59,2025-02-25 00:21:22
+380,Sonar Transducer 8538,Transdutor de sonar para profundidade,11,11,91022994,UN,TRUE,2023-08-26 10:57:31,2025-10-05 05:56:32
+381,Cabo Náutico 9083,Cabo de polipropileno trançado,11,6,18179420,M,TRUE,2023-11-11 09:41:38,2025-11-15 22:45:04
+382,Cabo Náutico 4851,Cabo de polipropileno trançado,6,8,25635518,M,TRUE,2026-02-12 03:40:36,2026-07-09 01:58:21
+383,Sonar Transducer 7919,Transdutor de sonar para profundidade,8,8,68917102,UN,TRUE,2023-08-18 06:32:36,2025-05-09 07:27:42
+384,Bateria Náutica 684,Bateria estacionária 105Ah náutica,11,8,73320460,UN,TRUE,2024-09-21 18:15:23,2026-08-24 06:19:34
+385,GPS Plotter 5137,GPS chartplotter com cartografia,11,1,72966024,UN,TRUE,2025-07-23 20:12:15,2026-01-15 23:34:17
+386,Sonar Transducer 9061,Transdutor de sonar para profundidade,8,6,85551590,UN,TRUE,2025-06-14 02:38:18,2026-01-20 09:09:01
+387,Cabo Náutico 6511,Cabo de polipropileno trançado,9,4,30582882,M,TRUE,2024-03-08 15:31:51,2024-11-20 05:38:31
+388,Cabo Náutico 8945,Cabo de polipropileno trançado,4,10,59613827,M,TRUE,2021-09-08 18:56:33,2026-11-28 21:07:54
+389,Motor de Popa 5331,Motor de popa 4 tempos para embarcações de lazer,12,8,62052770,UN,TRUE,2026-07-23 21:55:01,2026-11-12 00:24:26
+390,Defensa Náutica 3955,Defensa cilíndrica em PVC,5,12,90002169,PC,TRUE,2025-08-16 06:36:17,2026-09-19 03:12:51
+391,Bússola de Bordo 5574,Bússola magnética líquida com iluminação,6,2,77620847,UN,TRUE,2021-01-05 02:53:03,2025-11-14 13:13:00
+392,Tinta Antifouling 3067,Tinta antiincrustante 3.6L para casco,12,9,34690522,L,TRUE,2021-01-07 01:01:36,2024-06-27 06:16:00
+393,Hélice de Alumínio 2428,Hélice 3 pás para motor de popa,2,1,50440787,UN,TRUE,2023-04-10 05:16:19,2024-09-20 15:26:48
+394,Sonar Transducer 2625,Transdutor de sonar para profundidade,9,6,18155340,UN,TRUE,2022-06-01 08:42:46,2025-06-25 00:27:59
+395,Vela Mestra 9165,Vela mestra em dacron para veleiros 32 pés,1,14,68539431,UN,TRUE,2021-10-19 23:38:24,2023-03-08 10:44:31
+396,Bússola de Bordo 8014,Bússola magnética líquida com iluminação,4,4,84535831,UN,TRUE,2025-02-22 16:54:32,2025-06-11 10:23:17
+397,GPS Plotter 3411,GPS chartplotter com cartografia,11,11,68105168,UN,FALSE,2021-03-04 15:31:15,2025-12-17 07:19:47
+398,Âncora Bruce 4713,Âncora de garra tipo Bruce em aço galvanizado,2,3,28227234,UN,TRUE,2026-01-23 02:03:10,2026-06-11 15:58:41
+399,Hélice de Alumínio 9811,Hélice 3 pás para motor de popa,4,2,33340919,UN,TRUE,2025-10-10 22:18:51,2026-06-03 13:33:31
+400,Vela Mestra 4667,Vela mestra em dacron para veleiros 32 pés,1,14,12324038,UN,TRUE,2026-09-26 05:38:03,2026-10-17 06:11:47
+401,Bússola de Bordo 4473,Bússola magnética líquida com iluminação,6,5,76008478,UN,FALSE,2020-06-10 01:46:20,2021-03-17 14:07:41
+402,Tinta Antifouling 3241,Tinta antiincrustante 3.6L para casco,5,6,40131203,L,TRUE,2024-03-21 15:33:13,2026-12-05 12:34:22
+403,Vela Mestra 807,Vela mestra em dacron para veleiros 32 pés,3,9,74989022,UN,TRUE,2021-12-22 12:54:47,2023-09-21 03:30:32
+404,Bússola de Bordo 679,Bússola magnética líquida com iluminação,12,8,11565541,UN,TRUE,2020-06-18 04:17:47,2023-11-06 10:06:15
+405,Bateria Náutica 9124,Bateria estacionária 105Ah náutica,12,6,54430409,UN,FALSE,2024-12-30 17:49:53,2025-09-25 04:54:52
+406,Motor de Popa 6404,Motor de popa 4 tempos para embarcações de lazer,8,13,55105413,UN,TRUE,2021-03-02 15:17:47,2021-04-15 01:31:24
+407,Motor de Popa 3225,Motor de popa 4 tempos para embarcações de lazer,7,13,48634485,UN,TRUE,2020-07-05 03:11:46,2023-03-10 13:21:50
+408,Sonar Transducer 7193,Transdutor de sonar para profundidade,8,5,85813738,UN,TRUE,2023-03-31 12:22:46,2025-10-07 07:11:33
+409,Hélice de Alumínio 9928,Hélice 3 pás para motor de popa,8,12,61240473,UN,TRUE,2022-07-29 22:42:59,2023-02-12 18:38:39
+410,Vela Mestra 207,Vela mestra em dacron para veleiros 32 pés,12,8,65905892,UN,TRUE,2023-12-20 00:51:26,2026-02-21 18:05:45
+411,Motor de Popa 684,Motor de popa 4 tempos para embarcações de lazer,8,2,69191185,UN,TRUE,2020-04-26 12:20:57,2020-06-07 10:19:03
+412,Motor de Popa 6647,Motor de popa 4 tempos para embarcações de lazer,4,1,45597527,UN,TRUE,2026-06-04 21:01:23,2026-12-03 12:21:29
+413,Cabo Náutico 5471,Cabo de polipropileno trançado,1,3,49163228,M,TRUE,2020-07-24 16:48:53,2021-01-12 05:56:01
+414,Âncora Bruce 5302,Âncora de garra tipo Bruce em aço galvanizado,5,14,88147983,UN,TRUE,2023-06-11 04:18:48,2024-07-01 19:20:52
+415,Bateria Náutica 6140,Bateria estacionária 105Ah náutica,4,6,46994036,UN,TRUE,2023-04-23 11:22:21,2024-07-11 18:17:32
+416,Tinta Antifouling 9500,Tinta antiincrustante 3.6L para casco,1,8,17723256,L,TRUE,2023-10-29 08:01:17,2026-08-11 08:01:37
+417,Bússola de Bordo 6310,Bússola magnética líquida com iluminação,12,9,91780929,UN,TRUE,2024-09-03 03:35:14,2026-08-18 15:03:13
+418,Tinta Antifouling 6959,Tinta antiincrustante 3.6L para casco,11,3,23181003,L,TRUE,2025-02-19 19:34:38,2026-06-22 17:58:16
+419,Defensa Náutica 9143,Defensa cilíndrica em PVC,7,1,57723119,PC,TRUE,2023-11-26 00:23:44,2026-12-04 00:28:28
+420,Colete Salva-Vidas 6879,Colete homologado classe III,6,8,50321778,UN,TRUE,2023-06-15 04:26:41,2026-04-09 12:25:24
+421,Hélice de Alumínio 314,Hélice 3 pás para motor de popa,10,1,24878567,UN,TRUE,2023-08-06 17:02:11,2026-11-05 19:37:41
+422,Sonar Transducer 7193,Transdutor de sonar para profundidade,11,14,57534669,UN,TRUE,2020-12-05 00:17:06,2021-07-02 20:48:02
+423,GPS Plotter 5583,GPS chartplotter com cartografia,4,3,51584937,UN,TRUE,2020-11-23 22:37:03,2021-01-03 03:49:37
+424,Colete Salva-Vidas 8874,Colete homologado classe III,6,13,39288587,UN,TRUE,2023-02-21 03:50:52,2025-06-25 08:41:47
+425,Bateria Náutica 2254,Bateria estacionária 105Ah náutica,10,1,77427725,UN,TRUE,2020-01-22 00:17:25,2020-12-25 19:15:37
+426,Motor de Popa 1296,Motor de popa 4 tempos para embarcações de lazer,2,13,39867507,UN,TRUE,2022-07-16 03:49:01,2024-07-31 19:26:33
+427,Âncora Bruce 5445,Âncora de garra tipo Bruce em aço galvanizado,3,1,50707259,UN,TRUE,2022-05-30 20:14:50,2023-09-29 14:30:29
+428,Sonar Transducer 8490,Transdutor de sonar para profundidade,7,10,83075210,UN,TRUE,2021-06-21 23:27:42,2025-10-15 12:03:47
+429,GPS Plotter 3591,GPS chartplotter com cartografia,4,10,36710807,UN,TRUE,2022-04-10 15:46:18,2026-01-17 18:48:37
+430,GPS Plotter 9763,GPS chartplotter com cartografia,6,11,43935698,UN,TRUE,2025-06-17 16:03:12,2026-07-14 15:22:25
+431,Hélice de Alumínio 571,Hélice 3 pás para motor de popa,1,8,46679826,UN,TRUE,2026-11-14 20:56:57,2026-12-16 21:51:12
+432,Defensa Náutica 2623,Defensa cilíndrica em PVC,1,5,61967754,PC,TRUE,2024-12-11 07:36:24,2026-09-07 07:08:00
+433,Colete Salva-Vidas 2045,Colete homologado classe III,1,8,31632708,UN,TRUE,2021-01-02 17:17:18,2023-05-03 22:07:38
+434,Defensa Náutica 5998,Defensa cilíndrica em PVC,7,6,55865727,PC,TRUE,2026-06-02 07:52:00,2026-06-19 09:38:38
+435,Bateria Náutica 5770,ver foto,2,2,77922849,UN,TRUE,2021-03-10 01:25:03,2021-09-30 14:08:42
+436,Bateria Náutica 6370,Bateria estacionária 105Ah náutica,10,6,39769163,UN,TRUE,2021-02-18 14:55:02,2024-01-04 20:19:21
+437,Hélice de Alumínio 728,Hélice 3 pás para motor de popa,11,4,90812586,UN,TRUE,2022-06-04 02:59:24,2023-11-19 14:18:45
+438,Colete Salva-Vidas 2217,Colete homologado classe III,12,12,40110830,UN,TRUE,2021-06-20 15:12:33,2023-08-02 01:29:13
+439,Motor de Popa 1376,Motor de popa 4 tempos para embarcações de lazer,11,8,98201841,UN,TRUE,2026-03-15 00:41:43,2026-12-15 09:11:12
+440,Bússola de Bordo 553,Bússola magnética líquida com iluminação,11,14,55523642,UN,TRUE,2025-09-02 10:38:04,2026-05-10 21:20:38
+441,Colete Salva-Vidas 4674,Colete homologado classe III,6,7,81512163,UN,TRUE,2021-11-14 17:37:15,2022-02-07 23:01:14
+442,Motor de Popa 8825,Motor de popa 4 tempos para embarcações de lazer,2,10,64687062,UN,TRUE,2025-03-19 12:27:48,2025-05-03 10:22:43
+443,Vela Mestra 6757,Vela mestra em dacron para veleiros 32 pés,1,4,71819219,UN,FALSE,2023-08-27 18:44:32,2025-08-28 20:59:21
+444,Hélice de Alumínio 4479,Hélice 3 pás para motor de popa,3,5,55984625,UN,TRUE,2024-11-04 10:19:12,2025-09-05 06:12:38
+445,Hélice de Alumínio 9779,Hélice 3 pás para motor de popa,9,13,82912591,UN,FALSE,2021-04-17 22:47:51,2024-01-22 10:20:31
+446,Vela Mestra 2993,Vela mestra em dacron para veleiros 32 pés,6,3,27665867,UN,TRUE,2021-05-27 05:01:41,2023-06-03 12:52:45
+447,Cabo Náutico 2366,Cabo de polipropileno trançado,12,2,98794705,M,TRUE,2023-12-04 11:56:28,2024-08-16 19:48:57
+448,Bateria Náutica 6898,Bateria estacionária 105Ah náutica,7,12,61534785,UN,TRUE,2023-07-04 12:21:28,2025-08-21 05:14:55
+449,Bússola de Bordo 8282,Bússola magnética líquida com iluminação,4,11,67708258,UN,FALSE,2021-04-22 05:31:58,2026-08-31 15:02:23
+450,Hélice de Alumínio 290,Hélice 3 pás para motor de popa,6,2,61440255,UN,TRUE,2023-11-25 00:27:23,2024-03-06 10:21:53
+451,Cabo Náutico 5416,Cabo de polipropileno trançado,11,13,34585914,M,TRUE,2021-10-28 19:06:33,2023-03-19 14:31:08
+452,Tinta Antifouling 4641,Tinta antiincrustante 3.6L para casco,11,8,37659717,L,TRUE,2020-08-08 18:27:34,2026-11-15 04:23:47
+453,Motor de Popa 8838,Motor de popa 4 tempos para embarcações de lazer,5,6,33260562,UN,TRUE,2025-06-14 00:53:51,2026-10-05 18:07:34
+454,Vela Mestra 401,Vela mestra em dacron para veleiros 32 pés,8,3,64102849,UN,TRUE,2020-05-09 19:57:37,2020-12-11 21:45:52
+455,Defensa Náutica 497,Defensa cilíndrica em PVC,1,14,58343748,PC,TRUE,2026-05-25 11:39:01,2026-10-02 14:18:24
+456,Colete Salva-Vidas 2374,Colete homologado classe III,4,13,37400744,UN,TRUE,2026-12-10 13:56:29,2026-12-14 17:59:00
+457,Tinta Antifouling 8834,Tinta antiincrustante 3.6L para casco,1,14,36409801,L,TRUE,2021-04-02 07:30:19,2022-09-19 20:40:21
+458,Sonar Transducer 9222,Transdutor de sonar para profundidade,5,9,46954188,UN,TRUE,2020-05-24 00:58:08,2024-11-09 00:53:32
+459,Vela Mestra 9743,Vela mestra em dacron para veleiros 32 pés,8,7,45673765,UN,TRUE,2021-02-06 23:29:34,2026-08-21 16:43:24
+460,GPS Plotter 2098,GPS chartplotter com cartografia,2,7,67427703,UN,TRUE,2024-10-31 22:15:19,2026-10-26 00:10:09
+461,Colete Salva-Vidas 3259,ver foto,7,14,47872931,UN,TRUE,2020-11-27 05:40:28,2024-04-23 10:22:44
+462,Hélice de Alumínio 1260,Hélice 3 pás para motor de popa,7,9,77215891,UN,TRUE,2024-02-05 13:36:58,2024-10-03 22:44:31
+463,Motor de Popa 8671,Motor de popa 4 tempos para embarcações de lazer,8,4,72126375,UN,TRUE,2021-07-14 01:41:24,2022-10-03 02:24:47
+464,GPS Plotter 9584,GPS chartplotter com cartografia,4,9,96432200,UN,TRUE,2026-12-31 07:03:57,2026-12-31 08:13:39
+465,Defensa Náutica 792,Defensa cilíndrica em PVC,4,5,67296038,PC,TRUE,2023-05-22 17:01:06,2025-05-18 09:46:35
+466,Bússola de Bordo 1900,Bússola magnética líquida com iluminação,11,14,17200752,UN,TRUE,2021-10-26 14:35:25,2022-08-10 09:38:59
+467,Colete Salva-Vidas 2345,Colete homologado classe III,11,9,42745188,UN,TRUE,2021-03-27 17:53:55,2024-07-14 00:40:11
+468,Tinta Antifouling 6054,Tinta antiincrustante 3.6L para casco,10,12,83058430,L,TRUE,2021-11-02 00:32:39,2025-05-30 17:31:22
+469,Motor de Popa 9450,Motor de popa 4 tempos para embarcações de lazer,3,10,45483698,UN,TRUE,2021-06-15 15:49:13,2022-06-20 09:59:23
+470,Defensa Náutica 9426,Defensa cilíndrica em PVC,11,1,14729223,PC,TRUE,2022-01-30 20:43:04,2025-06-22 02:27:19
+471,Colete Salva-Vidas 7201,Colete homologado classe III,5,10,47562901,UN,TRUE,2022-05-12 10:35:53,2026-08-15 18:32:24
+472,Defensa Náutica 9030,,6,11,80931323,PC,TRUE,2025-08-10 06:03:00,2025-12-26 10:38:39
+473,Motor de Popa 8491,Motor de popa 4 tempos para embarcações de lazer,6,3,92051984,UN,TRUE,2022-05-18 07:50:57,2025-09-13 13:03:23
+474,Tinta Antifouling 8791,Tinta antiincrustante 3.6L para casco,4,12,17925535,L,TRUE,2024-03-26 15:58:23,2026-09-17 16:40:47
+475,Bússola de Bordo 2331,Bússola magnética líquida com iluminação,3,6,25964807,UN,TRUE,2022-05-30 21:43:25,2026-08-17 09:38:40
+476,Vela Mestra 5689,Vela mestra em dacron para veleiros 32 pés,1,4,96969239,UN,TRUE,2024-08-18 05:50:16,2025-09-22 02:05:44
+477,Motor de Popa 8461,Motor de popa 4 tempos para embarcações de lazer,1,9,20133607,UN,TRUE,2026-12-05 20:32:43,2026-12-17 17:55:47
+478,Tinta Antifouling 3290,Tinta antiincrustante 3.6L para casco,4,6,78293712,L,TRUE,2026-12-07 23:43:07,2026-12-13 19:49:37
+479,Motor de Popa 9417,Motor de popa 4 tempos para embarcações de lazer,12,10,75816900,UN,TRUE,2022-12-27 17:11:48,2025-10-14 01:30:59
+480,Hélice de Alumínio 4260,Hélice 3 pás para motor de popa,8,14,35602343,UN,FALSE,2024-07-11 01:14:56,2024-11-30 03:24:16
+481,Bússola de Bordo 2683,Bússola magnética líquida com iluminação,3,12,95455150,UN,TRUE,2026-03-17 16:45:11,2026-12-15 19:30:43
+482,GPS Plotter 6316,GPS chartplotter com cartografia,4,7,16535947,UN,TRUE,2026-06-19 23:53:09,2026-09-04 19:53:50
+483,Defensa Náutica 9695,Defensa cilíndrica em PVC,2,10,67868711,PC,TRUE,2021-01-15 20:49:33,2025-04-07 09:01:09
+484,Hélice de Alumínio 6668,Hélice 3 pás para motor de popa,4,12,98517641,UN,TRUE,2021-04-06 16:58:02,2022-03-15 13:39:42
+485,GPS Plotter 5365,GPS chartplotter com cartografia,9,5,74457526,UN,TRUE,2021-01-18 14:59:20,2023-10-14 14:50:32
+486,Genérico,Motor de popa 4 tempos para embarcações de lazer,1,7,22965463,UN,TRUE,2021-02-15 18:08:52,2021-03-05 08:08:33
+487,Bússola de Bordo 5643,Bússola magnética líquida com iluminação,2,4,65026873,UN,TRUE,2020-05-07 19:40:49,2023-05-19 11:34:50
+488,Bateria Náutica 9984,Bateria estacionária 105Ah náutica,6,6,96743994,UN,TRUE,2021-06-24 16:43:09,2024-01-16 08:01:38
+489,Defensa Náutica 9755,Defensa cilíndrica em PVC,12,12,96235182,PC,FALSE,2025-07-11 22:56:37,2025-12-02 16:31:36
+490,Colete Salva-Vidas 3881,Colete homologado classe III,6,12,78559499,UN,TRUE,2026-04-25 10:01:22,2026-12-29 14:10:10
+491,Bússola de Bordo 4004,Bússola magnética líquida com iluminação,8,1,74828711,UN,TRUE,2021-11-14 16:07:22,2025-08-11 23:20:12
+492,Bateria Náutica 4361,Bateria estacionária 105Ah náutica,5,11,41585045,UN,TRUE,2024-08-19 08:48:27,2025-06-22 12:19:34
+493,Hélice de Alumínio 5003,Hélice 3 pás para motor de popa,4,8,34796760,UN,TRUE,2020-12-05 18:45:57,2024-09-12 00:58:26
+494,Motor de Popa 4783,Motor de popa 4 tempos para embarcações de lazer,12,13,66315964,UN,TRUE,2024-12-18 19:33:42,2025-01-19 01:27:53
+495,Sonar Transducer 4154,Transdutor de sonar para profundidade,2,9,26272665,UN,TRUE,2021-06-08 19:37:33,2024-12-15 15:44:46
+496,Bateria Náutica 6054,Bateria estacionária 105Ah náutica,5,14,33614101,UN,TRUE,2026-11-15 19:51:42,2026-11-22 19:02:34
+497,Colete Salva-Vidas 9810,Colete homologado classe III,3,7,14725609,UN,TRUE,2024-11-07 04:19:23,2025-11-18 21:41:03
+498,GPS Plotter 7720,GPS chartplotter com cartografia,12,14,42893405,UN,TRUE,2022-07-24 04:20:16,2022-12-27 22:40:30
+499,Âncora Bruce 3938,Âncora de garra tipo Bruce em aço galvanizado,12,3,75342356,UN,FALSE,2021-09-01 18:47:10,2025-04-20 01:07:05
+500,Motor de Popa 7932,Motor de popa 4 tempos para embarcações de lazer,1,4,10035954,UN,TRUE,2025-03-14 22:42:23,2025-10-18 00:49:53

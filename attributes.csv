@@ -1,0 +1,9 @@
+id,name,data_type
+1,color,text
+2,size,text
+3,length_m,number
+4,power_hp,number
+5,voltage_v,number
+6,weight_kg,number
+7,waterproof,boolean
+8,material,text

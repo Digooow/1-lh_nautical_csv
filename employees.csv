@@ -1,0 +1,16 @@
+id,full_name,cpf,email,role,primary_location_id,hire_date,termination_date,is_active,created_at,updated_at
+1,Maria Luísa Rodrigues,42679135105,maria.lu.sa.rodrigues.1@lhnautical.com.br,manager,5,2022-03-04,,TRUE,2021-08-15 06:33:02,2022-12-03 19:24:17
+2,Nicolas Ferreira,91124322450,nicolas.ferreira.2@lhnautical.com.br,stockist,4,2025-02-19,,TRUE,2023-01-12 10:19:11,2023-11-02 14:57:12
+3,Renan da Paz,54731453534,renan.da.paz.3@lhnautical.com.br,stockist,4,2022-02-24,2023-07-10,FALSE,2020-01-06 05:36:16,2023-12-21 08:24:02
+4,Juliana Fernandes,63002135283,juliana.fernandes.4@lhnautical.com.br,manager,2,2022-11-29,,TRUE,2026-04-21 01:16:00,2026-08-31 14:47:33
+5,Luiza Macedo,76501038545,luiza.macedo.5@lhnautical.com.br,buyer,1,2025-10-24,,TRUE,2024-10-17 01:21:00,2026-03-21 16:07:14
+6,Paulo Melo,59184273925,paulo.melo.6@lhnautical.com.br,salesperson,6,2024-04-08,,TRUE,2020-09-03 11:02:55,2020-09-26 20:30:04
+7,Maria Cecília Rocha,55077595968,maria.cec.lia.rocha.7@lhnautical.com.br,manager,3,2023-05-06,,TRUE,2020-12-03 13:02:26,2021-05-05 13:42:19
+8,Caio Vargas,65576431502,caio.vargas.8@lhnautical.com.br,admin,6,2021-06-08,2022-08-11,FALSE,2020-04-02 09:04:07,2026-10-21 02:41:19
+9, Sophia Castro,11540486753,sophia.castro.9@lhnautical.com.br,salesperson,5,2021-11-03,,TRUE,2024-04-05 06:20:53,2025-10-12 14:13:53
+10,Bella Machado,63263219804,bella.machado.10@lhnautical.com.br,salesperson,1,2024-03-22,,TRUE,2020-02-19 23:20:15,2021-12-10 14:53:55
+11,Júlia Monteiro,67566577980,j.lia.monteiro.11@lhnautical.com.br,stockist,3,2023-09-04,,TRUE,2022-07-26 08:20:32,2022-11-27 00:29:32
+12,Marcela Abreu,31905356986,marcela.abreu.12@lhnautical.com.br,admin,5,2022-02-28,,TRUE,2026-04-02 19:02:24,2026-07-12 05:27:37
+13,Gael das Neves,74800797969,gael.das.neves.13@lhnautical.com.br,buyer,5,2023-12-02,,TRUE,2022-03-23 05:50:58,2024-09-08 08:34:16
+14,Sr. Dom Araújo,46757440873,sr.dom.ara.jo.14@lhnautical.com.br,manager,3,2025-11-16,,TRUE,2026-02-01 21:40:34,2026-06-08 02:04:47
+15,Pedro Henrique Cavalcanti,70527543985,pedro.henrique.cavalcanti.15@lhnautical.com.br,manager,6,2025-04-06,,TRUE,2026-12-27 13:16:18,2026-12-27 16:49:55

@@ -1,0 +1,7 @@
+id,name,location_type,postal_code,street,number,complement,district,city,state,country,is_active,created_at,updated_at
+1,Loja Leão,store,64771-158,Conjunto de Siqueira,9,Sala 70,Vila Independencia 2ª Seção,Barbosa do Sul,PR,BR,TRUE,2021-10-31 15:54:22,2025-06-30 05:43:31
+2,Armazém Camargo,warehouse,11464-461,Trecho Montenegro,80,,Marieta 1ª Seção,Cavalcanti da Mata,PR,BR,TRUE,2025-07-13 17:06:52,2026-03-27 21:14:09
+3,Armazém Siqueira,warehouse,23774-877,Avenida Melo,381,Sala 53,Conjunto Paulo Vi,Brito da Serra,AP,BR,TRUE,2022-02-25 03:20:12,2023-05-11 21:16:33
+4,Armazém Novaes,warehouse,26799096,Passarela de Jesus,3,,São José,Fonseca do Oeste,PI,BR,TRUE,2025-09-01 23:06:47,2026-12-08 18:39:04
+5,Loja Oliveira,store,71646-821,Aeroporto de Albuquerque,17,,Palmeiras,Machado,AL,BR,TRUE,2020-05-26 03:13:42,2021-06-13 20:33:43
+6,Loja Mendonça,store,88669320,Área Olívia da Costa,58,Sala 92,Vila Independencia 1ª Seção,Mendonça da Mata,PI,BR,TRUE,2022-01-28 14:24:44,2023-02-01 18:27:07

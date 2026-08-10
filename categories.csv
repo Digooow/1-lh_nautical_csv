@@ -1,0 +1,15 @@
+id,name,slug,parent_category_id,is_active,created_at,updated_at
+1,Equipamentos,equipamentos,,TRUE,2025-09-29 15:42:52,2025-11-30 10:44:32
+2,Cabos,cabos,,TRUE,2020-07-16 15:36:35,2024-03-04 15:49:44
+3,Coletes Salva-Vidas,coletes-salva-vidas,,TRUE,2024-07-29 06:55:53,2025-08-22 15:53:43
+4,Motores,motores,3,TRUE,2023-09-10 10:04:47,2026-08-30 19:19:16
+5,Eletrônica Náutica,eletronica-nautica,2,TRUE,2021-03-08 18:54:59,2023-09-17 00:50:04
+6,Velas,velas,3,TRUE,2021-09-22 21:13:39,2024-04-08 18:01:16
+7,Âncoras,ncoras,1,TRUE,2024-01-15 05:56:53,2026-01-27 07:29:30
+8,Hélices,helices,1,TRUE,2023-03-24 08:50:07,2024-07-15 05:15:14
+9,Acessórios de Convés,acessorios-de-conves,2,TRUE,2025-03-05 11:57:32,2025-04-19 09:51:22
+10,Iluminação,iluminacao,1,TRUE,2025-06-20 10:59:24,2026-04-22 19:11:21
+11,Pintura Marítima,pintura-maritima,1,TRUE,2021-07-10 04:35:50,2024-09-10 22:21:42
+12,Manutenção,manutencao,1,TRUE,2024-03-12 03:06:03,2024-04-10 04:28:57
+13,SEGURANÇA,seguranca,2,TRUE,2024-12-21 21:37:02,2025-07-02 06:33:33
+14,Pesca,pesca,1,TRUE,2023-04-01 09:50:04,2026-04-14 12:00:40

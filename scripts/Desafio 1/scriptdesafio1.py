@@ -58,30 +58,38 @@ RESOLUÇÃO DA QUESTÃO 1 – ANÁLISE EXPLORATÓRIA (EDA)
 
 
 
+"""
+Análise exploratória da tabela orders.
+Calcula volume, distribuição e qualidade dos dados.
+"""
+
 import csv
 from datetime import datetime
 import os
 
+
 def analisar_orders(caminho_csv):
     """
-    Realiza a análise exploratória da tabela orders.
-    Retorna um dicionário com as métricas.
+    Retorna métricas da tabela orders:
+    - total de linhas e colunas
+    - intervalo de datas (created_at)
+    - estatísticas de total (min, max, média)
+    - contagem de nulos
     """
     with open(caminho_csv, 'r', encoding='utf-8') as f:
         leitor = csv.DictReader(f)
         cabecalho = leitor.fieldnames
-        
-        # Inicialização
+
         total_linhas = 0
         datas = []
         valores_total = []
         nulos_total = 0
         nulos_created_at = 0
-        
+
         for linha in leitor:
             total_linhas += 1
-            
-            # Coluna total
+
+
             val_total = linha.get('total')
             if val_total is None or val_total.strip() == '':
                 nulos_total += 1
@@ -89,39 +97,30 @@ def analisar_orders(caminho_csv):
                 try:
                     valores_total.append(float(val_total))
                 except ValueError:
-                    # Caso haja valores não numéricos, contamos como nulos para efeito de análise
                     nulos_total += 1
-            
-            # Coluna created_at
+
+
             data_str = linha.get('created_at')
             if data_str is None or data_str.strip() == '':
                 nulos_created_at += 1
             else:
                 try:
-                    # Assume formato ISO (YYYY-MM-DD HH:MM:SS) ou similar
                     datas.append(datetime.fromisoformat(data_str))
                 except ValueError:
-                    # Se não conseguir parsear, ignora para min/max (mas conta como inconsistente)
                     pass
-        
-        # Estatísticas das datas
-        if datas:
-            data_min = min(datas)
-            data_max = max(datas)
-        else:
-            data_min = data_max = None
-        
-        # Estatísticas do total
+
+        data_min = min(datas) if datas else None
+        data_max = max(datas) if datas else None
+
         if valores_total:
             total_min = min(valores_total)
             total_max = max(valores_total)
             total_avg = sum(valores_total) / len(valores_total)
         else:
             total_min = total_max = total_avg = None
-        
-        # Número de colunas
+
         num_colunas = len(cabecalho) if cabecalho else 0
-        
+
         return {
             'linhas': total_linhas,
             'colunas': num_colunas,
@@ -135,24 +134,28 @@ def analisar_orders(caminho_csv):
             'total_count': len(valores_total)
         }
 
+
 if __name__ == '__main__':
-    # Supondo que o arquivo orders.csv está no mesmo diretório
-    arquivo = 'orders.csv'
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.dirname(os.path.dirname(script_dir))
+    arquivo = os.path.join(root_dir, 'data', 'orders.csv')
+
     if not os.path.exists(arquivo):
-        print(f"Arquivo {arquivo} não encontrado.")
+        print(f"Erro: Arquivo {arquivo} não encontrado.")
     else:
         resultado = analisar_orders(arquivo)
-        
+
         print("=" * 50)
-        print("RELATÓRIO DE ANÁLISE EXPLORATÓRIA - orders")
+        print("RELATORIO DE ANALISE EXPLORATORIA - orders")
         print("=" * 50)
         print(f"Total de linhas          : {resultado['linhas']}")
         print(f"Total de colunas         : {resultado['colunas']}")
-        print(f"Data mínima (created_at) : {resultado['data_min']}")
-        print(f"Data máxima (created_at) : {resultado['data_max']}")
-        print(f"Valor mínimo de total    : {resultado['total_min']}")
-        print(f"Valor máximo de total    : {resultado['total_max']}")
-        print(f"Valor médio de total     : {resultado['total_avg']:.2f}" if resultado['total_avg'] is not None else "Valor médio: N/A")
+        print(f"Data minima (created_at) : {resultado['data_min']}")
+        print(f"Data maxima (created_at) : {resultado['data_max']}")
+        print(f"Valor minimo de total    : {resultado['total_min']:.2f}" if resultado['total_min'] is not None else "Valor minimo: N/A")
+        print(f"Valor maximo de total    : {resultado['total_max']:.2f}" if resultado['total_max'] is not None else "Valor maximo: N/A")
+        print(f"Valor medio de total     : {resultado['total_avg']:.2f}" if resultado['total_avg'] is not None else "Valor medio: N/A")
         print(f"Registros com total nulo : {resultado['nulos_total']}")
         print(f"Registros com created_at nulo: {resultado['nulos_created_at']}")
         print("=" * 50)

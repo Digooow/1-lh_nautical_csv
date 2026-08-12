@@ -1,8 +1,6 @@
 """
-Questão 4 – Análise de clientes
---------------------------------
-Ranking dos 10 clientes com maior ticket médio e diversidade >= 13 categorias.
-Para cada um, identifica a categoria com maior quantidade total de itens.
+Analise de clientes - Ranking dos 10 clientes com maior ticket medio
+e diversidade >= 13 categorias. Identifica a categoria preferida de cada um.
 """
 
 import subprocess
@@ -13,15 +11,13 @@ CONTAINER = 'postgres-challenge'
 DB_USER = 'challenge'
 DB_NAME = 'challenge_db'
 
+
 def executar_consulta(sql):
-    """
-    Executa a consulta SQL via docker exec, retornando uma lista de dicionários.
-    Usa --csv para obter saída com cabeçalho.
-    """
+
     cmd = [
         'docker', 'exec', '-i', CONTAINER,
         'psql', '-U', DB_USER, '-d', DB_NAME,
-        '--csv',          # saída CSV com cabeçalho
+        '--csv',
         '-c', sql
     ]
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
@@ -32,6 +28,7 @@ def executar_consulta(sql):
         return []
     reader = csv.DictReader(io.StringIO(stdout))
     return list(reader)
+
 
 def main():
     sql = """
@@ -77,7 +74,6 @@ def main():
     ranking_categoria AS (
       SELECT
         customer_id,
-        category_id,
         category_name,
         total_quantidade,
         ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY total_quantidade DESC) AS rn
@@ -103,9 +99,10 @@ def main():
             return
 
         print("=" * 90)
-        print("🏆 TOP 10 CLIENTES ELITE (Ticket Médio + Diversidade >= 13)")
+        print("TOP 10 CLIENTES ELITE (Ticket Medio + Diversidade >= 13)")
         print("=" * 90)
-        print(f"{'Cliente':<10} {'Ticket Médio':>15} {'Diversidade':>12} {'Faturamento':>15} {'Frequência':>10} {'Categoria Preferida':<30} {'Qtd Itens':>10}")
+        print(f"{'Cliente':<10} {'Ticket Medio':>15} {'Diversidade':>12} "
+              f"{'Faturamento':>15} {'Frequencia':>10} {'Categoria Preferida':<30} {'Qtd Itens':>10}")
         print("-" * 90)
 
         for linha in resultados:
@@ -118,7 +115,8 @@ def main():
                   f"{int(linha['quantidade_itens']):>10}")
 
     except Exception as e:
-        print(f"❌ Erro: {e}")
+        print(f"Erro: {e}")
+
 
 if __name__ == '__main__':
     main()

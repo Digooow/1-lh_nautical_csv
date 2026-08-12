@@ -2,8 +2,10 @@
 -- Questão 5 – Média de vendas por dia da semana (com calendário)
 -- ========================================================================
 
+"docker exec -i postgres-challenge psql -U challenge -d challenge_db < "scripts/Desafio 5/consultaSQL.sql""
+
 WITH
--- 1. Datas limite do período (apenas lojas físicas)
+
 datas_limites AS (
   SELECT
     MIN(created_at::DATE) AS data_inicio,
@@ -12,7 +14,7 @@ datas_limites AS (
   WHERE channel = 'pos'
 ),
 
--- 2. Calendário completo (todos os dias do período)
+
 calendario AS (
   SELECT
     generate_series(
@@ -22,7 +24,7 @@ calendario AS (
     )::DATE AS data
 ),
 
--- 3. Vendas diárias (soma do total por dia, apenas lojas físicas)
+
 vendas_diarias AS (
   SELECT
     created_at::DATE AS data,
@@ -32,7 +34,7 @@ vendas_diarias AS (
   GROUP BY created_at::DATE
 ),
 
--- 4. Cruzamento calendário × vendas (com zeros para dias sem venda)
+
 vendas_por_dia AS (
   SELECT
     c.data,
@@ -41,7 +43,7 @@ vendas_por_dia AS (
   LEFT JOIN vendas_diarias vd ON c.data = vd.data
 )
 
--- 5. Média por dia da semana
+
 SELECT
   CASE EXTRACT(DOW FROM data)
     WHEN 0 THEN 'Domingo'
@@ -56,4 +58,4 @@ SELECT
 FROM vendas_por_dia
 GROUP BY EXTRACT(DOW FROM data)
 ORDER BY media_vendas ASC
-LIMIT 1;   -- o primeiro é o dia com a pior média
+LIMIT 1;   

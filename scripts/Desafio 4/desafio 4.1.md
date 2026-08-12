@@ -2,7 +2,7 @@ Questão 4.2 – Explicação da metodologia
 1. Como você chegou nas categorias mais vendidas? (mapeamento da cadeia de chaves)
 Para identificar a categoria preferida de cada cliente, percorremos a cadeia de relacionamentos entre as tabelas, partindo do pedido até a categoria do produto:
 
-text
+
 orders → order_items → product_variants → products → categories
 orders.id = order_items.order_id
 
@@ -17,11 +17,11 @@ Essa cadeia permite, a partir de um pedido, acessar o nome da categoria (categor
 2. Qual lógica utilizou para filtrar os clientes com diversidade mínima?
 A diversidade é calculada como o número de categorias distintas que o cliente comprou:
 
-sql
+
 COUNT(DISTINCT p.category_id) AS diversidade
 O filtro de diversidade mínima de 13 categorias foi aplicado com a cláusula HAVING:
 
-sql
+
 HAVING COUNT(DISTINCT p.category_id) >= 13
 Assim, apenas clientes com diversidade igual ou superior a 13 entram no cálculo do ticket médio para o ranking.
 

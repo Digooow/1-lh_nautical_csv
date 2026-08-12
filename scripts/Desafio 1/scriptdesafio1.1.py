@@ -65,8 +65,7 @@ class PostgresExecutor:
         self.dbname = dbname
 
     def execute_query(self, sql):
-        # Mantém --tuples-only para não ter cabeçalho, mas não usa --csv,
-        # apenas saída delimitada por vírgula e sem alinhamento.
+
         cmd = [
             'docker', 'exec', '-i', self.container_name,
             'psql', '-U', self.user, '-d', self.dbname,
@@ -79,12 +78,12 @@ class PostgresExecutor:
             raise RuntimeError(f"Erro: {stderr}")
         if not stdout.strip():
             return None
-        # Lê a primeira linha como dados (sem cabeçalho)
+
         reader = csv.reader(io.StringIO(stdout))
         rows = list(reader)
         if not rows:
             return None
-        # Os campos estão na ordem: total_linhas, data_minima, data_maxima, valor_minimo, valor_maximo, valor_medio
+
         fields = ['total_linhas', 'data_minima', 'data_maxima', 'valor_minimo', 'valor_maximo', 'valor_medio']
         values = rows[0]
         return dict(zip(fields, values))

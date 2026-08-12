@@ -1,5 +1,5 @@
 -- Schema gerado automaticamente
--- Data: 2026-08-11 00:27:20
+-- Data: 2026-08-12 03:39:46
 
 DROP TABLE IF EXISTS addresses CASCADE;
 CREATE TABLE addresses (

@@ -1,20 +1,18 @@
+
+
 import csv
 import os
 import re
 from datetime import datetime
 
-# Configurações
-DIRETORIO_CSV = r'C:\Users\Rodrigo\Desktop\Projetos\1-lh_nautical_csv'
-ARQUIVO_SAIDA = 'schema.sql'
-AMOSTRA_LINHAS = None  # None = lê todas as linhas para inferência precisa
 
 def inferir_tipo_coluna(valores):
-    """Infere o tipo PostgreSQL mais adequado para uma coluna."""
+
     nao_nulos = [v for v in valores if v and v.strip()]
     if not nao_nulos:
         return 'TEXT'
 
-    # Tenta INTEGER
+
     todos_int = True
     for v in nao_nulos:
         try:
@@ -23,17 +21,15 @@ def inferir_tipo_coluna(valores):
             todos_int = False
             break
     if todos_int:
-        # Verifica se algum valor começa com zero (ex: CPF, telefone)
         for v in nao_nulos:
             if v[0] == '0' and len(v) > 1:
                 return 'TEXT'
-        # Se o número for muito grande (> 10 dígitos), usa TEXT
         max_len = max(len(v) for v in nao_nulos)
         if max_len > 10:
             return 'TEXT'
         return 'INTEGER'
 
-    # Tenta NUMERIC (decimal)
+
     todos_float = True
     for v in nao_nulos:
         try:
@@ -44,7 +40,7 @@ def inferir_tipo_coluna(valores):
     if todos_float:
         return 'NUMERIC'
 
-    # Tenta DATE (YYYY-MM-DD)
+
     todos_date = True
     for v in nao_nulos:
         try:
@@ -55,7 +51,7 @@ def inferir_tipo_coluna(valores):
     if todos_date:
         return 'DATE'
 
-    # Tenta TIMESTAMP (YYYY-MM-DD HH:MM:SS)
+
     todos_timestamp = True
     for v in nao_nulos:
         try:
@@ -66,11 +62,11 @@ def inferir_tipo_coluna(valores):
     if todos_timestamp:
         return 'TIMESTAMP'
 
-    # Se não encaixou em nenhum dos acima, é TEXT
     return 'TEXT'
 
+
 def sanitizar_nome(nome):
-    """Converte nome para formato seguro (minúsculo, underscores)."""
+
     nome = nome.strip().lower()
     nome = re.sub(r'[^a-z0-9]', '_', nome)
     nome = re.sub(r'_+', '_', nome)
@@ -79,12 +75,14 @@ def sanitizar_nome(nome):
         nome = 'col_' + nome
     return nome
 
-def processar_arquivos(diretorio):
-    arquivos = [f for f in os.listdir(diretorio) if f.lower().endswith('.csv')]
+
+def processar_arquivos(data_dir, amostra=None):
+
+    arquivos = [f for f in os.listdir(data_dir) if f.lower().endswith('.csv')]
     sql_statements = []
 
     for arquivo in arquivos:
-        caminho = os.path.join(diretorio, arquivo)
+        caminho = os.path.join(data_dir, arquivo)
         nome_tabela = sanitizar_nome(os.path.splitext(arquivo)[0])
         print(f'Processando {arquivo} -> {nome_tabela}')
 
@@ -100,9 +98,8 @@ def processar_arquivos(diretorio):
             valores_por_coluna = {i: [] for i in range(len(colunas))}
 
             for i, linha in enumerate(leitor):
-                if AMOSTRA_LINHAS is not None and i >= AMOSTRA_LINHAS:
+                if amostra is not None and i >= amostra:
                     break
-                # Normaliza número de colunas
                 if len(linha) < len(colunas):
                     linha += [''] * (len(colunas) - len(linha))
                 elif len(linha) > len(colunas):
@@ -119,18 +116,19 @@ def processar_arquivos(diretorio):
 
     return '\n\n'.join(sql_statements)
 
-def main():
-    if not os.path.isdir(DIRETORIO_CSV):
-        print(f'Diretório {DIRETORIO_CSV} não encontrado.')
-        return
-
-    sql_final = processar_arquivos(DIRETORIO_CSV)
-    with open(ARQUIVO_SAIDA, 'w', encoding='utf-8') as f:
-        f.write('-- Schema gerado automaticamente\n')
-        f.write(f'-- Data: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n\n')
-        f.write(sql_final)
-
-    print(f'\n✅ Schema gerado em {ARQUIVO_SAIDA}')
 
 if __name__ == '__main__':
-    main()
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.dirname(os.path.dirname(script_dir))
+    data_dir = os.path.join(root_dir, 'data')
+    output_file = os.path.join(script_dir, 'schema.sql')
+
+    if not os.path.isdir(data_dir):
+        print(f'Erro: Diretório {data_dir} não encontrado.')
+    else:
+        sql_final = processar_arquivos(data_dir, amostra=None)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write('-- Schema gerado automaticamente\n')
+            f.write(f'-- Data: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n\n')
+            f.write(sql_final)
+        print(f'Schema gerado em {output_file}')

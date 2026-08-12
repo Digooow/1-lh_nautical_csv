@@ -1,39 +1,34 @@
-📌 Questão 7.2 – Produto com MAIOR similaridade
-Ao executar o script, o primeiro item do ranking é o produto com a maior similaridade de cosseno em relação ao "Motor de Popa 1949".
+1. Como a matriz foi construída?
+A matriz usuário × produto foi construída a partir dos dados de pedidos e itens, seguindo os seguintes passos:
 
-Exemplo de saída (simulado):
+Junção das tabelas:
 
-text
-Produto de referência: Motor de Popa 1949
+orders (contém customer_id) foi unida a order_items via order_id.
 
-Ranking dos 5 produtos mais similares:
-1. Motor de Popa 1950 (similaridade = 0.8734)   ← MAIOR similaridade
-2. Caixa de Direção 2000 (similaridade = 0.7652)
-3. Hélice Náutica 4 pás (similaridade = 0.7421)
-4. Sistema de Injeção Eletrônica (similaridade = 0.6897)
-5. Tanque de Combustível 100L (similaridade = 0.6543)
-Resposta: O produto com maior similaridade é "Motor de Popa 1950" (no exemplo). Para obter o valor real, execute o script com seus dados.
+order_items foi unida a product_variants via product_variant_id.
 
-📘 Questão 7.3 – Explicação
-a) Como a matriz foi construída?
-A matriz de interação usuário × produto foi construída seguindo estas etapas:
+product_variants foi unida a products via product_id.
+Essa cadeia permitiu mapear cada compra de um cliente a um produto específico.
 
-Junção das tabelas: orders (com customer_id) → order_items → product_variants → products (com product_id).
+Remoção de duplicatas:
+Para cada par (cliente, produto), manteve‑se apenas uma ocorrência, independentemente da quantidade comprada. Isso garante que a matriz reflita apenas a presença (se o cliente comprou ou não o produto), e não a frequência ou volume.
 
-Filtragem: Mantivemos apenas as colunas customer_id e product_id, removendo duplicatas (um cliente pode comprar o mesmo produto várias vezes, mas queremos apenas presença).
+Pivotamento:
+Os dados foram transformados em uma tabela onde:
 
-Criação da coluna de presença: atribuímos valor 1 para cada par (cliente, produto) que aparece na lista de compras.
+Linhas: clientes (customer_id)
 
-Pivotamento: Usamos pivot_table com fill_value=0 para criar uma tabela onde as linhas são customer_id, as colunas são product_id e os valores são 1 ou 0.
+Colunas: produtos (product_id)
 
-O resultado é uma matriz esparsa (muitos zeros) que representa, para cada cliente, quais produtos ele já comprou.
+Valores: 1 se o cliente comprou o produto pelo menos uma vez; 0 caso contrário.
+Essa operação gerou uma matriz esparsa (com muitos zeros), que é a base para o cálculo de similaridade.
 
-b) O que significa a similaridade de cosseno nesse contexto?
-A similaridade de cosseno entre dois produtos A e B mede o quão parecidos são os padrões de compra dos clientes que adquiriram cada um.
+2. O que significa a similaridade de cosseno nesse contexto?
+A similaridade de cosseno mede o quão parecidos são os padrões de compra de dois produtos, com base nos clientes que os adquiriram.
 
-Cada produto é representado por um vetor binário onde cada posição corresponde a um cliente e o valor é 1 se aquele cliente comprou o produto, 0 caso contrário.
+Cada produto é representado por um vetor binário de dimensão igual ao número de clientes. Cada posição do vetor indica se aquele cliente comprou o produto (1) ou não (0).
 
-O cosseno do ângulo entre esses dois vetores é calculado como:
+A similaridade de cosseno entre dois produtos A e B é calculada como:
 
 cos_sim
 (
@@ -56,19 +51,13 @@ cos_sim(A,B)=
 A⋅B
 ​
  
-O numerador é o número de clientes que compraram ambos os produtos.
+O numerador (A · B) é o número de clientes que compraram ambos os produtos.
 
-O denominador é a raiz quadrada do produto das quantidades de clientes que compraram cada um (normalização).
+O denominador normaliza o resultado, dividindo pelo produto das normas (tamanhos) dos vetores, evitando que produtos muito populares sejam favorecidos apenas por terem mais compras.
 
-Quanto maior o valor (próximo de 1), mais clientes compraram os dois produtos juntos, indicando maior similaridade. Produtos com baixa similaridade têm padrões de compra diferentes.
+O resultado é um valor entre 0 e 1 (neste caso, todos positivos, pois não há vetores negativos). Quanto maior o valor, mais clientes compraram os dois produtos juntos, indicando maior similaridade. No exemplo, a similaridade de 0,2566 entre o motor de popa e o GPS Plotter 6249 indica uma sobreposição moderada de clientes, mas ainda assim a maior entre todos os pares.
 
-c) Uma limitação desse método de recomendação.
-Limitação principal: O método baseado em similaridade de cosseno com dados binários (presença/ausência) ignora a quantidade comprada e o valor monetário das compras. Um cliente que comprou 100 unidades de um produto e outro que comprou apenas 1 têm o mesmo peso na matriz. Isso pode distorcer a recomendação, pois produtos de alto valor ou alta frequência podem ser subestimados.
+3. Uma limitação desse método de recomendação
+A principal limitação é que a similaridade de cosseno com dados binários (presença/ausência) ignora a quantidade comprada e o valor monetário das transações. Um cliente que comprou 100 unidades de um produto e outro que comprou apenas 1 têm o mesmo peso na matriz. Isso pode distorcer a recomendação, pois produtos de alto valor ou alta recorrência podem ser subestimados em relação a produtos mais baratos ou comprados esporadicamente.
 
-Além disso, o método sofre com o problema de cold start: produtos novos ou com poucas compras têm vetores esparsos, dificultando o cálculo de similaridade com outros itens. Também não considera a ordem temporal das compras ou preferências explícitas (como avaliações).
-
-✅ Resumo das respostas
-Item	Resposta
-7.1	Código Python fornecido acima.
-7.2	O nome do produto com maior similaridade é o primeiro da lista gerada pelo script. Execute para obter o valor real.
-7.3	Explicação detalhada sobre construção da matriz, significado da similaridade de cosseno e limitação do método.
+Além disso, o método sofre com o problema de cold start: produtos novos ou com poucas compras têm vetores esparsos (poucos clientes), dificultando o cálculo de similaridade com outros itens. Também não considera a ordem temporal das compras, nem preferências explícitas (como avaliações ou notas), o que limita a capacidade de personalização da recomendação.

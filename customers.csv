@@ -52,6 +52,7 @@ id,person_type,legal_name,trade_name,tax_id,state_registration,email,phone,is_ac
 51,PF,Emanuel das Neves,,06465786931,,emanuel.das.neves.51@example.com,5508961317127,TRUE,2024-03-20 12:35:08,2024-08-26 05:42:36
 52,PJ,TBD,Leão,78182247000163,773782639,moraes.eireli.52@example.com,5521946584044,TRUE,2023-05-05 01:46:47,2025-10-31 21:18:31
 53,PF,Rebeca Cassiano,,49528407862,,rebeca.cassiano.53@example.com,55087955886753,TRUE,2021-05-23 12:58:09,2025-10-10 09:51:29
+985,PJ,Silveira S.A.,Pinto S/A,74495910000129,122528837,silveira.s.a.985@example.com,5505966186323,TRUE,2021-02-14 06:46:36,2026-10-21 19:10:47
 54,PF,Srta. Maria Isis da Conceição,,97604667830,,srta.maria.isis.da.concei.o.54@example.com,5505976627028,TRUE,2021-12-16 16:28:51,2025-07-03 02:07:17
 55,PF,Luísa Brito,,78656050052,ISENTO,lu.sa.brito.55@example.com,55018970262174,TRUE,2026-10-16 11:30:30,2026-10-26 04:44:25
 56,PF,Dr. Bruno Farias,,22194196226,,dr.bruno.farias.56@example.com,5565978091343,TRUE,2020-11-22 05:07:56,2021-03-10 05:52:00
@@ -983,7 +984,6 @@ id,person_type,legal_name,trade_name,tax_id,state_registration,email,phone,is_ac
 982,PF,Mathias Novais,,73093311845,,mathias.novais.982@example.com,5528930615370,TRUE,2023-01-14 00:17:52,2026-10-29 11:48:26
 983,PJ,Cardoso e Filhos ME,Cavalcante,83695507000134,446263251,cardoso.e.filhos.me.983@example.com,5548981121031,TRUE,2025-04-28 15:02:12,2025-08-15 07:23:39
 984,PJ,Cavalcanti S.A.,,37063255000103,175188781,cavalcanti.s.a.984@example.com,55094915152638,TRUE,2026-02-26 11:28:49,2026-07-09 06:02:33
-985,PJ,Silveira S.A.,Pinto S/A,74495910000129,122528837,silveira.s.a.985@example.com,5505966186323,TRUE,2021-02-14 06:46:36,2026-10-21 19:10:47
 986,PF,Rafaela Vasconcelos,,23704687340,,rafaela.vasconcelos.986@example.com,5513978765530,TRUE,2022-11-26 10:55:08,2023-04-28 21:56:49
 987,PJ,Machado S.A.,Oliveira Ltda.,86351992000117,055605712,machado.s.a.987@example.com,5598981927788,TRUE,2025-01-18 08:57:27,2026-07-04 21:10:00
 988,PJ,Campos ME,Viana e Filhos,38382328000192,534864010,campos.me.988@example.com,5524962456185,TRUE,2024-11-08 01:18:49,2026-11-09 18:34:18

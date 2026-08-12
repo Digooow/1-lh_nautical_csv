@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Dashboard - LH Nautical</title>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f8f9fa; color: #333; }
+    h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+    h2 { color: #34495e; margin-top: 30px; border-left: 5px solid #3498db; padding-left: 15px; }
+    .kpi { display: flex; flex-wrap: wrap; gap: 20px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; }
+    .kpi-item { flex: 1; min-width: 150px; text-align: center; padding: 10px; background: #f1f9ff; border-radius: 8px; }
+    .kpi-item .label { font-size: 14px; color: #7f8c8d; font-weight: bold; }
+    .kpi-item .value { font-size: 24px; font-weight: bold; color: #2c3e50; margin-top: 5px; }
+    .kpi-item .value.real { color: #27ae60; }
+    .grafico { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; }
+    .grafico img { width: 100%; height: auto; border-radius: 5px; }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 20px 0; }
+    th { background-color: #3498db; color: white; font-weight: bold; padding: 12px 8px; text-align: center; }
+    td { padding: 10px 8px; text-align: center; border-bottom: 1px solid #ecf0f1; }
+    tr:hover { background-color: #f1f9ff; }
+    .footer { text-align: center; color: #95a5a6; font-size: 14px; margin-top: 30px; border-top: 1px solid #ecf0f1; padding-top: 20px; }
+</style>
+</head>
+<body>
+<h1>📊 Dashboard de Análise – LH Nautical</h1>
+
+<div class="kpi">
+    <div class="kpi-item">
+        <div class="label">Faturamento Total</div>
+        <div class="value real">R$ 1,406,487,201.80</div>
+    </div>
+    <div class="kpi-item">
+        <div class="label">Número de Pedidos</div>
+        <div class="value">48,998</div>
+    </div>
+    <div class="kpi-item">
+        <div class="label">Ticket Médio</div>
+        <div class="value real">R$ 28,704.99</div>
+    </div>
+    <div class="kpi-item">
+        <div class="label">Pior Dia da Semana</div>
+        <div class="value">Quarta</div>
+        <div style="font-size:14px;color:#e74c3c;">R$ 540,432.34 em média</div>
+    </div>
+</div>
+
+<div class="grafico">
+    <h2>📈 Gráficos Analíticos</h2>
+    <img src='dashboard_graficos.png' alt='Gráficos' style='max-width:100%;'>
+</div>
+
+<h2>🏆 Top 10 Clientes Elite (Diversidade ≥ 13)</h2>
+<table>
+    <tr><th>Cliente</th><th>Faturamento</th><th>Frequência</th><th>Ticket Médio</th><th>Diversidade</th><th>Categoria Preferida</th></tr>
+<tr><td>1477</td><td>R$ 3,834,485.79</td><td>22</td><td>R$ 174,294.81</td><td>14</td><td>Hélices</td></tr><tr><td>1691</td><td>R$ 3,453,998.50</td><td>20</td><td>R$ 172,699.92</td><td>14</td><td>Acessórios de Convés</td></tr><tr><td>929</td><td>R$ 4,473,415.16</td><td>26</td><td>R$ 172,054.43</td><td>14</td><td>Hélices</td></tr><tr><td>1067</td><td>R$ 4,610,578.75</td><td>27</td><td>R$ 170,762.18</td><td>14</td><td>Equipamentos</td></tr><tr><td>1505</td><td>R$ 2,554,093.77</td><td>15</td><td>R$ 170,272.92</td><td>14</td><td>Pesca</td></tr><tr><td>300</td><td>R$ 3,348,742.37</td><td>20</td><td>R$ 167,437.12</td><td>14</td><td>Pesca</td></tr><tr><td>568</td><td>R$ 3,484,219.20</td><td>21</td><td>R$ 165,915.20</td><td>14</td><td>Pintura Marítima</td></tr><tr><td>1116</td><td>R$ 2,638,008.13</td><td>16</td><td>R$ 164,875.51</td><td>14</td><td>Coletes Salva-Vidas</td></tr><tr><td>177</td><td>R$ 5,212,191.17</td><td>32</td><td>R$ 162,880.97</td><td>14</td><td>Hélices</td></tr><tr><td>1470</td><td>R$ 4,218,169.21</td><td>26</td><td>R$ 162,237.28</td><td>14</td><td>Equipamentos</td></tr>
+</table>
+
+<h2>📦 Previsão vs Real – Bússola de Bordo 702</h2>
+<table>
+    <tr><th>Mês</th><th>Real</th><th>Previsão</th></tr>
+<tr><td>Jan</td><td>69</td><td>25.33</td></tr><tr><td>Fev</td><td>42</td><td>25.11</td></tr><tr><td>Mar</td><td>45</td><td>21.48</td></tr>
+</table>
+<p><b>Soma da previsão (arredondada):</b> 72 unidades</p>
+<p><b>MAE (Mean Absolute Error):</b> 28.02 unidades</p>
+
+<h2>🛍️ Produtos similares ao "Motor de Popa 1949"</h2>
+<ol>
+<li>GPS Plotter 6249 (similaridade = 0.2566)</li><li>Vela Mestra 1913 (similaridade = 0.2562)</li><li>Cabo Náutico 2105 (similaridade = 0.2558)</li><li>Cabo Náutico 9048 (similaridade = 0.2393)</li><li>Motor de Popa 5331 (similaridade = 0.2377)</li>
+</ol>
+
+<div class="footer">
+    Dashboard gerado automaticamente com Python • LH Nautical • 12/08/2026 02:32
+</div>
+</body>
+</html>

@@ -1,63 +1,73 @@
-# Desafio Técnico – Indicium Academy
+# ⚓ Desafio Técnico – Indicium Academy
 
-Este repositório contém a solução completa para um desafio de análise de dados proposto pela **Indicium Academy**, com o objetivo de explorar, modelar e extrair insights de um banco de dados de vendas do setor náutico.
+[![Python](https://img.shields.io/badge/Python-3.14-blue.svg)](https://www.python.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791.svg)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-24.0-2496ED.svg)](https://www.docker.com/)
+[![Pandas](https://img.shields.io/badge/Pandas-2.0-150458.svg)](https://pandas.pydata.org/)
+
+
+Este repositório contém a solução completa para um desafio de análise de dados proposto pela **Indicium Academy**. O objetivo foi explorar, modelar e extrair insights de um banco de dados de vendas do setor náutico, utilizando ferramentas modernas de engenharia e análise de dados.
 
 ---
 
 ## 📋 Contexto do Desafio
 
-O desafio simula um cenário real de uma empresa do setor náutico (LH Nautical), que enfrentava problemas de gestão de estoque e falta de visibilidade sobre o comportamento dos clientes. A partir de um conjunto de arquivos CSV, foi solicitado:
+A empresa fictícia **LH Nautical** enfrentava problemas de gestão de estoque e falta de visibilidade sobre o comportamento dos clientes. A partir de um conjunto de arquivos CSV, foram propostas as seguintes tarefas:
 
-- Realizar uma análise exploratória dos dados (EDA).
-- Construir um schema otimizado para o banco de dados.
-- Carregar os dados brutos em um PostgreSQL.
-- Identificar clientes fiéis (elite) com base em ticket médio e diversidade de categorias.
-- Criar uma dimensão de calendário para corrigir a média de vendas por dia da semana.
-- Construir um modelo baseline de previsão de demanda.
-- Desenvolver um sistema de recomendação de produtos (similaridade de cosseno).
-- Entregar um dashboard com os principais indicadores.
+- Realizar uma **análise exploratória** dos dados.
+- Construir um **schema otimizado** para o banco de dados.
+- **Carregar os dados** em um PostgreSQL via Docker.
+- Identificar **clientes fiéis (elite)** com base em ticket médio e diversidade de categorias.
+- Criar uma **dimensão de calendário** para corrigir a média de vendas por dia da semana.
+- Construir um **modelo baseline de previsão de demanda**.
+- Desenvolver um **sistema de recomendação** de produtos usando similaridade de cosseno.
+- Entregar um **dashboard interativo** com os principais indicadores.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Python 3.14** – Processamento de dados, scripts ETL, modelo de previsão e recomendação.
-- **Pandas, NumPy, Scikit-learn** – Manipulação de dados e algoritmos de similaridade.
-- **PostgreSQL** – Banco de dados relacional (rodando em container Docker).
-- **Docker** – Isolamento e reprodução do ambiente do banco de dados.
-- **Power BI / Looker Studio** – Dashboard interativo (opcional, utilizando dados exportados).
-- **HTML + CSS** – Dashboard gerado automaticamente em Python (para visualização rápida).
-- **Git** – Versionamento do código.
+| Ferramenta | Descrição |
+|------------|-----------|
+| **Python 3.14** | Processamento de dados, scripts ETL, modelos de previsão e recomendação. |
+| **Pandas / NumPy** | Manipulação e análise de dados. |
+| **Scikit-learn** | Cálculo de similaridade de cosseno. |
+| **PostgreSQL** | Banco de dados relacional (em container Docker). |
+| **Docker** | Ambiente isolado e reproduzível para o banco de dados. |
+| **Matplotlib / Seaborn** | Geração de gráficos estáticos. |
+| **HTML + CSS** | Dashboard interativo gerado automaticamente. |
+| **Git** | Versionamento do código. |
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-.
+```
+
 ├── data/ # Arquivos CSV originais
 │ ├── orders.csv
 │ ├── order_items.csv
 │ ├── products.csv
 │ ├── customers.csv
 │ └── ...
-├── scripts/
-│ ├── desafio_1/ # Análise Exploratória (EDA)
-│ ├── desafio_2/ # Geração de Schema com inferência de tipos
-│ ├── desafio_3/ # Carga dos dados no PostgreSQL
-│ ├── desafio_4/ # Análise de clientes (ranking elite)
-│ ├── desafio_5/ # Dimensão de calendário
-│ ├── desafio_6/ # Previsão de demanda
-│ ├── desafio_7/ # Sistema de recomendação
-│ └── dashboard/ # Geração do dashboard (HTML + gráficos)
+├── scripts/ # Scripts por desafio
+│ ├── desafio 1/ # Análise Exploratória (EDA)
+│ ├── desafio 2/ # Geração de Schema com inferência de tipos
+│ ├── desafio 3/ # Carga dos dados no PostgreSQL
+│ ├── desafio 4/ # Análise de clientes (ranking elite)
+│ ├── desafio 5/ # Dimensão de calendário
+│ ├── desafio 6/ # Previsão de demanda
+│ └── desafio 7/ # Sistema de recomendação
+├── dashboard-obrigatorio/ # Dashboard principal
 │ ├── dashboard_obrigatorio.py
 │ └── utils/
 │ ├── graficos.py
 │ └── html_generator.py
-├── docs/ # Documentação e respostas das questões
 ├── dashboard_alternativo.html # Dashboard gerado (abrir no navegador)
 ├── dashboard_graficos.png # Imagem dos gráficos
-├── README.md
-└── requirements.txt # Dependências Python
+└── README.md
+
+```
 
 ---
 
@@ -69,36 +79,55 @@ O desafio simula um cenário real de uma empresa do setor náutico (LH Nautical)
 - **Python 3.14** (ou superior) com `pip`.
 - **Git** (para clonar o repositório).
 
+---
+
 ### 2. Clonar o Repositório
 
-```bash
+
 git clone https://github.com/seu-usuario/indicium-academy-challenge.git
 cd indicium-academy-challenge
 
+---
+
+
 3. Configurar o Banco de Dados (PostgreSQL com Docker)
 
-docker run --name postgres-challenge -e POSTGRES_PASSWORD=mysecret -e POSTGRES_USER=challenge -e POSTGRES_DB=challenge_db -p 5432:5432 -d postgres
 
+bash
+docker run --name postgres-challenge \
+  -e POSTGRES_PASSWORD=mysecret \
+  -e POSTGRES_USER=challenge \
+  -e POSTGRES_DB=challenge_db \
+  -p 5432:5432 -d postgres
+
+---
+  
 4. Carregar os Dados
 Navegue até scripts/desafio_3/ e execute:
 
+bash
 python carregar_dados.py
-
 Isso criará as tabelas e importará todos os CSVs da pasta data/.
+
+---
 
 5. Executar o Dashboard
 Na raiz do projeto:
 
-python scripts/dashboard/dashboard_obrigatorio.py
-
-Serão gerados dois arquivos na pasta scripts/dashboard/:
+bash
+python dashboard-obrigatorio/dashboard_obrigatorio.py
+Serão gerados dois arquivos:
 
 dashboard_graficos.png – imagem com os gráficos.
 
 dashboard_alternativo.html – relatório interativo (abra no navegador).
 
-6. (Opcional) Exportar dados para Power BI / Looker Studio
-Caso prefira utilizar ferramentas de BI, exporte as tabelas principais via \copy ou utilize os CSVs já disponíveis na pasta data/.
+---
+
+6. (Opcional) Exportar para Power BI / Looker Studio
+Caso prefira utilizar ferramentas de BI, exporte as tabelas principais via \copy ou utilize os CSVs já disponíveis em data/.
+
+---
 
 📊 Principais Resultados
 Análise Exploratória (Questão 1)
@@ -144,7 +173,7 @@ Ranking de Produtos Similares ao Motor de Popa 1949.
 Preview do Dashboard
 https://dashboard-obrigatorio/dashboard_graficos.png
 
-O arquivo HTML dashboard_alternativo.html pode ser aberto diretamente no navegador para visualização interativa.
+O arquivo dashboard_alternativo.html pode ser aberto diretamente no navegador para visualização interativa.
 
 🧠 Competências Demonstradas
 Análise exploratória de dados (EDA) com bibliotecas padrão.

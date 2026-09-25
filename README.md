@@ -1,197 +1,343 @@
-# ⚓ Desafio Técnico – Indicium Academy
+# Desafio Técnico Indicium Lighthouse — LH Nautical
 
-[![Python](https://img.shields.io/badge/Python-3.14-blue.svg)](https://www.python.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791.svg)](https://www.postgresql.org/)
-[![Docker](https://img.shields.io/badge/Docker-24.0-2496ED.svg)](https://www.docker.com/)
-[![Pandas](https://img.shields.io/badge/Pandas-2.0-150458.svg)](https://pandas.pydata.org/)
+Este repositório reúne a solução desenvolvida para o desafio técnico da
+**Indicium Lighthouse**, usando dados fictícios de uma operação de comércio
+náutico. O projeto percorre o ciclo completo de uma análise de dados:
+inspeção da qualidade dos dados, modelagem e carga em banco, consultas
+analíticas, previsão de demanda, recomendação de produtos e apresentação dos
+resultados em um dashboard.
 
+> **Objetivo do projeto:** transformar arquivos CSV operacionais em análises
+> reproduzíveis e informações úteis para decisões de vendas, estoque e
+> relacionamento com clientes.
 
-Este repositório contém a solução completa para um desafio de análise de dados proposto pela **Indicium Academy**. O objetivo foi explorar, modelar e extrair insights de um banco de dados de vendas do setor náutico, utilizando ferramentas modernas de engenharia e análise de dados.
+## Visão geral do desafio
 
----
+O conjunto de dados contém tabelas de clientes, pedidos, itens vendidos,
+produtos, categorias, fornecedores, compras, estoque, devoluções e outras
+entidades de uma operação varejista. As atividades foram organizadas nas
+seguintes etapas:
 
-## 📋 Contexto do Desafio
+| Etapa     | Entrega                                   | Abordagem utilizada                                             |
+| --------- | ----------------------------------------- | --------------------------------------------------------------- |
+| 1         | Análise exploratória e consulta inicial | Python com biblioteca padrão e SQL no PostgreSQL               |
+| 2         | Geração do schema                       | Inferência de tipos, normalização de nomes e DDL automático |
+| 3         | Carga dos dados                           | Docker, PostgreSQL,`docker cp` e `\copy`                    |
+| 4         | Clientes elite                            | CTEs, agregações,`HAVING` e função de janela              |
+| 5         | Média de vendas por dia da semana        | Dimensão de calendário com`generate_series` e `LEFT JOIN` |
+| 6         | Previsão de demanda                      | Baseline de média móvel de três meses                        |
+| 7         | Recomendação de produtos                | Matriz cliente–produto e similaridade de cosseno               |
+| Dashboard | Comunicação dos resultados              | Python, Matplotlib, Seaborn e HTML                              |
 
-A empresa fictícia **LH Nautical** enfrentava problemas de gestão de estoque e falta de visibilidade sobre o comportamento dos clientes. A partir de um conjunto de arquivos CSV, foram propostas as seguintes tarefas:
+## Estrutura do projeto
 
-- Realizar uma **análise exploratória** dos dados.
-- Construir um **schema otimizado** para o banco de dados.
-- **Carregar os dados** em um PostgreSQL via Docker.
-- Identificar **clientes fiéis (elite)** com base em ticket médio e diversidade de categorias.
-- Criar uma **dimensão de calendário** para corrigir a média de vendas por dia da semana.
-- Construir um **modelo baseline de previsão de demanda**.
-- Desenvolver um **sistema de recomendação** de produtos usando similaridade de cosseno.
-- Entregar um **dashboard interativo** com os principais indicadores.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-| Ferramenta | Descrição |
-|------------|-----------|
-| **Python 3.14** | Processamento de dados, scripts ETL, modelos de previsão e recomendação. |
-| **Pandas / NumPy** | Manipulação e análise de dados. |
-| **Scikit-learn** | Cálculo de similaridade de cosseno. |
-| **PostgreSQL** | Banco de dados relacional (em container Docker). |
-| **Docker** | Ambiente isolado e reproduzível para o banco de dados. |
-| **Matplotlib / Seaborn** | Geração de gráficos estáticos. |
-| **HTML + CSS** | Dashboard interativo gerado automaticamente. |
-| **Git** | Versionamento do código. |
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-
-├── data/ # Arquivos CSV originais
-│ ├── orders.csv
-│ ├── order_items.csv
-│ ├── products.csv
-│ ├── customers.csv
-│ └── ...
-├── scripts/ # Scripts por desafio
-│ ├── desafio 1/ # Análise Exploratória (EDA)
-│ ├── desafio 2/ # Geração de Schema com inferência de tipos
-│ ├── desafio 3/ # Carga dos dados no PostgreSQL
-│ ├── desafio 4/ # Análise de clientes (ranking elite)
-│ ├── desafio 5/ # Dimensão de calendário
-│ ├── desafio 6/ # Previsão de demanda
-│ └── desafio 7/ # Sistema de recomendação
-├── dashboard-obrigatorio/ # Dashboard principal
-│ ├── dashboard_obrigatorio.py
-│ └── utils/
-│ ├── graficos.py
-│ └── html_generator.py
-├── dashboard_alternativo.html # Dashboard gerado (abrir no navegador)
-├── dashboard_graficos.png # Imagem dos gráficos
+```text
+.
+├── data/                         # 24 arquivos CSV de origem
+├── scripts/
+│   ├── Desafio 1/
+│   │   ├── scriptdesafio1.1.py  # Métricas executadas no PostgreSQL
+│   │   └── scriptdesafio1.py    # EDA sem pandas/polars/dask
+│   ├── Desafio 2/
+│   │   ├── gerar_schema.py      # Geração automática do DDL
+│   │   └── schema.sql           # Schema gerado
+│   ├── Desafio 3/
+│   │   └── carregar_dados.py    # Criação das tabelas e carga dos CSVs
+│   ├── Desafio 4/
+│   │   ├── analise_clientes.py  # Ranking dos clientes elite
+│   │   └── desafio 4.1.md       # Explicação da metodologia
+│   ├── Desafio 5/
+│   │   ├── consultaSQL.sql      # Calendário e média por dia da semana
+│   │   └── consultaSQL.md       # Justificativa da dimensão calendário
+│   ├── Desafio 6/
+│   │   ├── desafio6.py          # Previsão da Bússola de Bordo 702
+│   │   └── desafio6.md          # Metodologia e limitações do baseline
+│   └── Desafio 7/
+│       ├── desafio7.py          # Recomendação por similaridade
+│       └── desafio7.md          # Explicação da matriz e do método
+├── dashboard-obrigatorio/
+│   ├── dashboard-obrigatorio.py # Orquestração do dashboard
+│   ├── utils/                   # Gráficos e gerador de HTML
+│   ├── dashboard_graficos.png   # Saída visual estática
+│   └── dashboard_alternativo.html # Relatório navegável
 └── README.md
-
 ```
 
----
+## Tecnologias
 
-## 🚀 Como Executar o Projeto
+- **Python 3.10+** — scripts de análise e automação. O projeto foi executado
+  com Python 3.14.
+- **Pandas e NumPy** — manipulação de dados e cálculo numérico.
+- **Scikit-learn** — similaridade de cosseno.
+- **PostgreSQL** — persistência e consultas analíticas.
+- **Docker** — ambiente reprodutível para o banco.
+- **Matplotlib e Seaborn** — visualizações.
+- **HTML/CSS** — relatório final navegável.
+
+## Como executar
 
 ### 1. Pré-requisitos
 
-- **Docker** instalado e em execução.
-- **Python 3.14** (ou superior) com `pip`.
-- **Git** (para clonar o repositório).
+- Python instalado e disponível no PATH;
+- Docker Desktop em execução;
+- Git, caso o projeto seja obtido por clone.
 
----
+Instale as dependências Python:
 
-### 2. Clonar o Repositório
+```powershell
+py -m pip install pandas numpy scikit-learn matplotlib seaborn
+```
 
+### 2. Criar o banco PostgreSQL
 
-git clone https://github.com/seu-usuario/indicium-academy-challenge.git
-cd indicium-academy-challenge
-
----
-
-
-3. Configurar o Banco de Dados (PostgreSQL com Docker)
-
-
-bash
-docker run --name postgres-challenge \
-  -e POSTGRES_PASSWORD=mysecret \
-  -e POSTGRES_USER=challenge \
-  -e POSTGRES_DB=challenge_db \
+```powershell
+docker run --name postgres-challenge `
+  -e POSTGRES_PASSWORD=mysecret `
+  -e POSTGRES_USER=challenge `
+  -e POSTGRES_DB=challenge_db `
   -p 5432:5432 -d postgres
+```
 
----
-  
-4. Carregar os Dados
-Navegue até scripts/desafio_3/ e execute:
+Se o container já existir, inicie-o com `docker start postgres-challenge`.
 
-bash
-python carregar_dados.py
-Isso criará as tabelas e importará todos os CSVs da pasta data/.
+### 3. Executar a análise exploratória
 
----
-
-5. Executar o Dashboard
 Na raiz do projeto:
 
-bash
-python dashboard-obrigatorio/dashboard_obrigatorio.py
-Serão gerados dois arquivos:
+```powershell
+py ".\scripts\Desafio 1\scriptdesafio1.py"
+```
 
-dashboard_graficos.png – imagem com os gráficos.
+Essa etapa lê `data\orders.csv` diretamente, sem depender de um banco de
+dados, e calcula volume, número de colunas, intervalo de datas, estatísticas
+de `total` e valores nulos.
 
-dashboard_alternativo.html – relatório interativo (abra no navegador).
+### 4. Gerar o schema e carregar os CSVs
 
----
+```powershell
+py ".\scripts\Desafio 2\gerar_schema.py"
+py ".\scripts\Desafio 3\carregar_dados.py"
+```
 
-6. (Opcional) Exportar para Power BI / Looker Studio
-Caso prefira utilizar ferramentas de BI, exporte as tabelas principais via \copy ou utilize os CSVs já disponíveis em data/.
+O primeiro comando recria `scripts\Desafio 2\schema.sql`. O segundo cria as
+tabelas no PostgreSQL e carrega os arquivos encontrados em `data\`.
 
----
+### 5. Executar consultas e análises
 
-📊 Principais Resultados
-Análise Exploratória (Questão 1)
-Total de linhas: 48.998 pedidos.
+Com o container em execução:
 
-Período: de 2020-01-01 a 2026-12-31.
+```powershell
+py ".\scripts\Desafio 1\scriptdesafio1.1.py"
+py ".\scripts\Desafio 4\analise_clientes.py"
+docker exec -i postgres-challenge psql -U challenge -d challenge_db `
+  -f "/dev/stdin" < ".\scripts\Desafio 5\consultaSQL.sql"
+```
 
-Ticket médio: R$ 28.704,99.
+As etapas 6 e 7 usam os CSVs diretamente:
 
-Diagnóstico: dados com outliers significativos e datas futuras inconsistentes – exigem tratamento para análises robustas.
+```powershell
+py ".\scripts\Desafio 6\desafio6.py"
+py ".\scripts\Desafio 7\desafio7.py"
+```
 
-Clientes Elite (Questão 4)
-Top 10 clientes com diversidade ≥ 13 categorias e maior ticket médio.
+### 6. Gerar o dashboard
 
-Categoria preferida predominante: Hélices e Equipamentos.
+```powershell
+py ".\dashboard-obrigatorio\dashboard-obrigatorio.py"
+```
 
-Média de Vendas por Dia da Semana (Questão 5)
-Pior dia: Quarta-feira (média de R$ 540.432,34), corrigindo a distorção causada por dias sem venda.
+Os arquivos `dashboard_graficos.png` e `dashboard_alternativo.html` são
+gerados dentro de `dashboard-obrigatorio\`. Abra o HTML em um navegador para
+consultar os KPIs, a análise de clientes, a previsão e o ranking de produtos
+similares.
 
-Previsão de Demanda (Questão 6)
-Produto: Bússola de Bordo 702.
+## Análise das atividades desenvolvidas
 
-MAE: 28,02 unidades.
+### 1. Qualidade e exploração dos dados
 
-Soma prevista (arredondada): 72 unidades para o 1º trimestre de 2026 (real = 156).
+A EDA percorre `orders.csv` com `csv.DictReader`, contabiliza registros e
+colunas, converte datas ISO e calcula mínimo, máximo e média de `total`. A
+consulta equivalente no PostgreSQL valida os resultados em outro ambiente.
 
-Recomendação de Produtos (Questão 7)
-Produto mais similar ao "Motor de Popa 1949": GPS Plotter 6249 (similaridade = 0,2566).
+O diagnóstico encontrado foi:
 
-📈 Dashboard
-O dashboard gerado contém:
+- 48.998 pedidos e 13 colunas em `orders.csv`;
+- intervalo de `created_at` entre 2020 e 2026;
+- nenhum nulo identificado em `total` ou `created_at`;
+- ticket médio aproximado de R$ 28.704,99;
+- valor máximo de pedido de aproximadamente R$ 127.262,02.
 
-Visão Geral: Faturamento total, número de pedidos, ticket médio, pior dia da semana.
+As datas até 2026 e os valores extremos foram tratados como alertas de
+qualidade, não como dados automaticamente válidos. Antes de uma decisão
+operacional, seria necessário confirmar a data de referência do dataset e
+investigar os outliers.
 
-Gráfico de Média por Dia da Semana.
+### 2. Modelagem e ETL
 
-Top 10 Clientes Elite com faturamento, frequência, ticket médio e categoria preferida.
+O gerador de schema lê todos os CSVs, sanitiza nomes de tabelas e colunas e
+infere tipos básicos (`INTEGER`, `NUMERIC`, `DATE`, `TIMESTAMP` ou `TEXT`).
+Depois, o carregador cria as tabelas e usa `\copy`, uma forma eficiente de
+importar CSV pelo próprio PostgreSQL.
 
-Previsão vs Real para a Bússola de Bordo 702.
+Essa solução demonstra automação e portabilidade, mas o schema gerado é uma
+camada inicial de ingestão: não define chaves primárias, estrangeiras,
+índices, `NOT NULL` ou regras de domínio. Em um ambiente produtivo, essas
+restrições e validações deveriam ser adicionadas em uma camada de
+curadoria.
 
-Ranking de Produtos Similares ao Motor de Popa 1949.
+### 3. Clientes elite
 
-Preview do Dashboard
-https://dashboard-obrigatorio/dashboard_graficos.png
+A análise conecta:
 
-O arquivo dashboard_alternativo.html pode ser aberto diretamente no navegador para visualização interativa.
+```text
+orders → order_items → product_variants → products → categories
+```
 
-🧠 Competências Demonstradas
-Análise exploratória de dados (EDA) com bibliotecas padrão.
+Clientes com pelo menos 13 categorias distintas são filtrados por `HAVING`.
+Em seguida, os dez maiores tickets médios são selecionados, e uma função
+`ROW_NUMBER()` identifica a categoria preferida de cada cliente pela soma de
+quantidades compradas.
 
-Modelagem de dados e inferência de tipos para PostgreSQL.
+Esse desenho mostra domínio de joins, CTEs, agregações e funções de janela,
+além da preocupação em restringir o cálculo da categoria aos clientes que
+realmente entraram no Top 10.
 
-ETL com Python e integração com Docker/PostgreSQL.
+### 4. Dimensão de calendário
 
-SQL avançado – CTEs, janelas de agregação, dimensão de datas.
+A consulta da Questão 5 gera uma sequência contínua de datas com
+`generate_series`, agrega as vendas por dia e faz `LEFT JOIN` com o
+calendário. Dias sem venda recebem zero com `COALESCE` antes da média por dia
+da semana.
 
-Previsão de demanda com baseline de média móvel.
+Essa decisão evita uma média artificialmente alta causada pela exclusão dos
+dias sem pedidos — um conceito importante para indicadores de operação e
+planejamento de abertura da loja.
 
-Sistema de recomendação baseado em similaridade de cosseno.
+### 5. Previsão de demanda
 
-Criação de dashboard automatizado com Python, matplotlib e HTML.
+Para a **Bússola de Bordo 702**, as vendas são agregadas por mês. O treino vai
+até dezembro de 2025 e o teste cobre janeiro, fevereiro e março de 2026. A
+previsão é uma média móvel dos três últimos valores disponíveis; depois de
+cada previsão, o valor previsto é incorporado ao histórico, simulando uma
+previsão recursiva sem vazamento de dados.
 
-Organização de projeto com estrutura modular e documentação clara.
+Resultado registrado no projeto:
 
-📌 Conclusão
-Este projeto demonstra a capacidade de extrair valor de dados brutos, transformando-os em informações acionáveis para a tomada de decisão. A abordagem combinou técnicas estatísticas, machine learning (simples) e engenharia de dados, tudo em um ambiente reproduzível e documentado.
+- MAE: aproximadamente 28,02 unidades;
+- soma prevista para o trimestre: 72 unidades;
+- soma real no período: 156 unidades.
 
+O resultado evidencia a limitação do baseline: uma média móvel simples não
+modela sazonalidade, tendência ou eventos. Um próximo passo seria comparar
+com um baseline sazonal e modelos como ARIMA, Prophet ou regressão com
+variáveis temporais.
+
+### 6. Sistema de recomendação
+
+O recomendador transforma compras em uma matriz binária
+**cliente × produto**. Cada produto é representado pelo vetor de clientes
+que o compraram, e a similaridade de cosseno compara esses vetores.
+
+Para o produto **Motor de Popa 1949**, o resultado documentado aponta o
+**GPS Plotter 6249** como item mais similar, com similaridade aproximada de
+0,2566.
+
+O método é simples, explicável e adequado como baseline. Porém, ignora
+quantidade, valor, recência e contexto da compra, além de sofrer com
+esparsidade e cold start. Recomendações futuras poderiam combinar
+similaridade por conteúdo, popularidade, recência e histórico individual.
+
+### 7. Dashboard e comunicação
+
+O dashboard consolida indicadores de faturamento, quantidade de pedidos,
+ticket médio, pior dia da semana, clientes elite, previsão versus realizado e
+produtos similares. A saída combina gráficos estáticos em PNG com um
+relatório HTML leve, que pode ser aberto localmente sem servidor.
+
+Essa etapa transforma análises técnicas em uma narrativa para pessoas
+decisoras: cada gráfico responde a uma pergunta de negócio e os resultados
+podem ser compartilhados como artefatos.
+
+## Resultados consolidados
+
+| Indicador                          |      Resultado documentado |
+| ---------------------------------- | -------------------------: |
+| Pedidos analisados                 |                     48.998 |
+| Ticket médio                      |               R$ 28.704,99 |
+| Maior valor de pedido              |              R$ 127.262,02 |
+| Filtro de cliente elite            |   Pelo menos 13 categorias |
+| Previsão de demanda               |      MAE de 28,02 unidades |
+| Previsão do 1º trimestre de 2026 |                72 unidades |
+| Similaridade mais alta documentada | GPS Plotter 6249 — 0,2566 |
+
+Os números acima são resultados registrados nos artefatos do desafio e podem
+variar caso os CSVs sejam substituídos ou os scripts sejam executados com
+regras de filtro diferentes.
+
+## Pontos de atenção e próximos passos
+
+1. **Unificar filtros de canal:** a consulta SQL da Questão 5 filtra
+   `channel = 'pos'`, enquanto o dashboard calcula a média com todos os
+   canais. Para comparar os resultados diretamente, a regra de negócio deve
+   ser padronizada.
+2. **Evitar dupla contagem no faturamento por cliente:** ao juntar pedidos
+   com itens, `o.total` pode ser repetido para cada item. O faturamento deve
+   ser agregado em uma relação de pedidos antes da junção com itens, ou
+   deduplicado por pedido.
+3. **Validar o recorte temporal:** datas futuras devem ser confirmadas antes de
+   alimentar indicadores ou modelos.
+4. **Fortalecer o schema:** adicionar chaves, índices, constraints e uma
+   estratégia explícita de staging/curadoria.
+5. **Reproduzir dependências:** criar um `requirements.txt` ou `pyproject.toml`
+   e fixar versões para facilitar a execução por outras pessoas.
+6. **Evoluir os modelos:** comparar a média móvel com baselines sazonais e
+   medir o recomendador com métricas offline, como Precision@K ou Recall@K.
+
+## Habilidades adquiridas
+
+### Engenharia e qualidade de dados
+
+- Leitura robusta de CSV e tratamento de datas, nulos e valores inválidos;
+- análise de completude, distribuição, outliers e consistência temporal;
+- inferência de tipos e sanitização de nomes para geração de DDL;
+- automação de carga de múltiplos arquivos em PostgreSQL;
+- uso de Docker para criar um ambiente reproduzível.
+
+### SQL e modelagem
+
+- construção de CTEs e consultas analíticas encadeadas;
+- joins entre tabelas transacionais e dimensionais;
+- `GROUP BY`, `HAVING`, `COUNT(DISTINCT)`, `COALESCE` e `generate_series`;
+- funções de janela para ranqueamento;
+- compreensão de granularidade e riscos de dupla contagem;
+- criação de uma dimensão de calendário para indicadores confiáveis.
+
+### Estatística e machine learning
+
+- agregação e leitura de séries temporais mensais;
+- separação temporal de treino e teste;
+- prevenção de data leakage;
+- avaliação com MAE;
+- construção de matriz esparsa cliente–produto;
+- aplicação e interpretação de similaridade de cosseno;
+- análise crítica das limitações de modelos baseline.
+
+### Comunicação e produto de dados
+
+- definição de KPIs orientados a perguntas de negócio;
+- visualização com Matplotlib e Seaborn;
+- geração automatizada de relatório HTML;
+- documentação de metodologia, resultados, limitações e próximos passos;
+- tradução de resultados técnicos em recomendações acionáveis.
+
+## Conclusão
+
+O desafio demonstra uma evolução completa do dado bruto até a informação
+apresentável: primeiro foi verificada a qualidade dos dados, depois criada a
+estrutura de armazenamento, realizadas consultas para responder perguntas de
+negócio e, por fim, construídos modelos simples e um dashboard.
+
+Mais importante que os números isolados, a solução evidencia capacidade de
+investigar premissas, escolher métodos adequados ao problema, reconhecer
+limitações e comunicar resultados com transparência — competências centrais
+para atuação em análise e engenharia de dados.

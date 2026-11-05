@@ -1,48 +1,31 @@
-# Configurações locais de editores e IDEs.
-.vscode/
-*.code-workspace
-.idea/
-.vs/
-*.user
-*.suo
+# Ambientes virtuais Python
+.venv/
+venv/
+ENV/
 
-# Variáveis de ambiente, credenciais e certificados.
+# Bytecode e caches Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Empacotamento
+build/
+dist/
+*.egg-info/
+
+# Variáveis de ambiente e segredos
 .env
 .env.*
 !.env.example
-!.env.template
-*.local
-*.secret
-*.secrets
-credentials.json
-service-account*.json
-*.pem
-*.key
-*.crt
-*.cer
-*.p12
-*.pfx
-*.jks
-*.keystore
-secrets/
-secret/
 
-# Artefatos, caches e arquivos temporários.
-*.log
-*.tmp
-*.temp
-*.bak
+# Artefatos e relatórios gerados pelo pipeline
+reports/
+
+# Configurações locais de IDEs
+.vscode/
+.idea/
 *.swp
-*.swo
-*.dmp
-*.dump
-__pycache__/
-*.pyc
-.pytest_cache/
-.cache/
-node_modules/
-build/
-dist/
-out/
-bin/
-obj/

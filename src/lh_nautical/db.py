@@ -37,7 +37,13 @@ def get_database_url() -> str:
     port = os.getenv("POSTGRES_PORT", "5432")
     dbname = os.getenv("POSTGRES_DB", "challenge_db")
     user = quote_plus(os.getenv("POSTGRES_USER", "challenge"))
-    password = quote_plus(os.getenv("POSTGRES_PASSWORD", "mysecret"))
+    raw_password = os.getenv("POSTGRES_PASSWORD")
+    if not raw_password:
+        raise RuntimeError(
+            "Variável de ambiente POSTGRES_PASSWORD não configurada. "
+            "Defina-a no arquivo .env ou no ambiente antes de conectar ao banco."
+        )
+    password = quote_plus(raw_password)
     return f"postgresql+psycopg://{user}:{password}@{host}:{port}/{dbname}"
 
 

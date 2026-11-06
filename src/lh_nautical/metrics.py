@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, TypedDict
 
 import numpy as np
 import pandas as pd
@@ -29,6 +29,38 @@ WEEKDAY_NAMES_PT: dict[int, str] = {
     5: "Sábado",
     6: "Domingo",
 }
+
+
+class OrdersEdaReportDict(TypedDict):
+    total_registros_brutos: int
+    pedidos_validos: int
+    status_paid: int
+    status_confirmed: int
+    status_cancelled: int
+    status_draft: int
+    canal_ecommerce: int
+    canal_pos: int
+    data_minima: str
+    data_maxima: str
+    nulos_total: int
+    nulos_created_at: int
+    duplicatas_id: int
+    duplicatas_order_number: int
+    divergencias_formula_total: int
+    divergencias_soma_itens: int
+    pedidos_sem_itens: int
+    faturamento_bruto: float
+    ticket_medio_bruto: float
+    faturamento_valido: float
+    ticket_medio_valido: float
+    valor_minimo: float
+    q1_25: float
+    mediana_50: float
+    q3_75: float
+    valor_maximo: float
+    iqr: float
+    limite_superior_iqr: float
+    qtd_outliers_iqr: int
 
 
 @dataclass(frozen=True)
@@ -65,9 +97,9 @@ class OrdersEdaReport:
     limite_superior_iqr: float
     qtd_outliers_iqr: int
 
-    def to_dict(self) -> dict[str, Any]:
-        """Converte o relatório em dicionário serializável."""
-        return asdict(self)
+    def to_dict(self) -> OrdersEdaReportDict:
+        """Converte o relatório em dicionário serializável estritamente tipado."""
+        return asdict(self)  # type: ignore[return-value]
 
 
 def load_orders(

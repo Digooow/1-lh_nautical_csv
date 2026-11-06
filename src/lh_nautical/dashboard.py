@@ -17,7 +17,7 @@ import json
 import logging
 from datetime import datetime
 from pathlib import Path
-from typing import Any
+from typing import Any, TypedDict
 
 import pandas as pd
 
@@ -45,12 +45,19 @@ def _format_int(value: int) -> str:
     return f"{value:,}".replace(",", ".")
 
 
+class PlotlyPayloadsDict(TypedDict):
+    weekday: dict[str, Any]
+    elite: dict[str, Any]
+    forecast: dict[str, Any]
+    rec: dict[str, Any]
+
+
 def _build_plotly_payloads(
     weekday_df: pd.DataFrame,
     elite_df: pd.DataFrame,
     forecast_eval: ForecastEvaluation,
     rec_df: pd.DataFrame,
-) -> dict[str, Any]:
+) -> PlotlyPayloadsDict:
     """Constrói as especificações JSON interativas dos 4 gráficos Plotly."""
     # 1. Gráfico de Vendas por Dia da Semana (ordenado de Segunda a Domingo)
     wd_chron = weekday_df.sort_values("dia_semana_num").reset_index(drop=True)

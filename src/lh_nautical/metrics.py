@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, TypedDict
+from typing import TypedDict
 
 import numpy as np
 import pandas as pd
@@ -194,8 +194,8 @@ def compute_orders_eda(
     qtd_outliers = int((valid_orders["total"] > upper_fence).sum())
 
     return OrdersEdaReport(
-        total_registros_brutos=int(len(raw_orders)),
-        pedidos_validos=int(len(valid_orders)),
+        total_registros_brutos=len(raw_orders),
+        pedidos_validos=len(valid_orders),
         status_paid=int(status_counts.get("paid", 0)),
         status_confirmed=int(status_counts.get("confirmed", 0)),
         status_cancelled=int(status_counts.get("cancelled", 0)),

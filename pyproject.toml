@@ -9,6 +9,14 @@ description = "Pipeline analitico e de engenharia de dados LH Nautical"
 readme = "README.md"
 requires-python = ">=3.11"
 
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pyright]
+include = ["src", "tests", "run_all.py"]
+extraPaths = ["src"]
+pythonVersion = "3.11"
+
 [tool.ruff]
 target-version = "py311"
 line-length = 100

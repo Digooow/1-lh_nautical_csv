@@ -11,9 +11,9 @@ O projeto estrutura o ciclo completo desde a modelagem relacional estrita e carg
 A solução elimina duplicação de regras de negócio entre SQL, Python e camada de visualização por meio de três decisões arquiteturais:
 
 1. **Filtro Canônico de Pedidos Válidos (`status IN ('paid', 'confirmed')`):**
-   A tabela bruta `orders` contém **48.998 registros**, dos quais **4.847 (9,89%)** possuem status `cancelled` e **2.451 (5,00%)** possuem status `draft`. Tanto no banco de dados (via views `vw_valid_orders` e `vw_valid_order_items` em [`sql/schema.sql`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/sql/schema.sql)) quanto no pacote Python ([`src/lh_nautical/metrics.py`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/src/lh_nautical/metrics.py)), pedidos cancelados e rascunhos são isolados das métricas comerciais. Todos os módulos aceitam o parâmetro explícito `valid_only: bool` para permitir auditoria cruzada contra a base bruta sem filtro.
+   A tabela bruta `orders` contém **48.998 registros**, dos quais **4.847 (9,89%)** possuem status `cancelled` e **2.451 (5,00%)** possuem status `draft`. Tanto no banco de dados (via views `vw_valid_orders` e `vw_valid_order_items` em [`sql/schema.sql`](./sql/schema.sql)) quanto no pacote Python ([`src/lh_nautical/metrics.py`](./src/lh_nautical/metrics.py)), pedidos cancelados e rascunhos são isolados das métricas comerciais. Todos os módulos aceitam o parâmetro explícito `valid_only: bool` para permitir auditoria cruzada contra a base bruta sem filtro.
 2. **Ingestão Transacional via `psycopg` v3 `COPY`:**
-   O módulo [`src/lh_nautical/ingestion.py`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/src/lh_nautical/ingestion.py) aplica o DDL e carrega as 24 tabelas em ordem estritamente topológica (respeitando todas as 37 chaves estrangeiras) dentro de uma única transação atômica (`with engine.begin():`), validando a paridade exata de contagem de linhas entre CSV e tabela após cada `COPY`.
+   O módulo [`src/lh_nautical/ingestion.py`](./src/lh_nautical/ingestion.py) aplica o DDL e carrega as 24 tabelas em ordem estritamente topológica (respeitando todas as 37 chaves estrangeiras) dentro de uma única transação atômica (`with engine.begin():`), validando a paridade exata de contagem de linhas entre CSV e tabela após cada `COPY`.
 3. **Preservação de Granularidade (Anti-Fan-Out):**
    Métricas na granularidade de pedido (`SUM(orders.total)`, `COUNT(orders.id)`) são agregadas em CTE/DataFrame próprio antes de qualquer junção `1:N` com `order_items` (média de 3,01 itens por pedido), impedindo a multiplicação artificial de receita.
 
@@ -104,18 +104,18 @@ A tabela abaixo consolida os indicadores auditados tanto na **Visão Comercial C
 
 ## 4. Detalhamento Técnico por Etapa
 
-### Q1 — Auditoria Exploratória e Contratos de Dados ([`sql/q1_eda_orders.sql`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/sql/q1_eda_orders.sql) | [`metrics.py`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/src/lh_nautical/metrics.py))
+### Q1 — Auditoria Exploratória e Contratos de Dados ([`sql/q1_eda_orders.sql`](./sql/q1_eda_orders.sql) | [`metrics.py`](./src/lh_nautical/metrics.py))
 
 - **Integridade Contábil:** 100% dos 48.998 pedidos satisfazem a identidade de cabeçalho `total = subtotal - discount_amount` e a reconciliação com as 147.320 linhas de `order_items` (`orders.subtotal = SUM(order_items.line_total)`), sem nenhum pedido órfão.
 - **Horizonte Temporal:** O intervalo `2020-01-01` a `2026-12-31` corresponde à janela sintética completa do dataset (onde o 1º trimestre de 2026 é utilizado como conjunto de teste na Questão 6).
 - **Qualidade de Catálogo (`products.csv`):** A auditoria identificou 4 pares de nomes duplicados entre os 500 produtos cadastrados (`Bússola de Bordo 702` nos IDs `74` e `240`; `Defensa Náutica 3153` nos IDs `29` e `317`; `Sonar Transducer 7193` nos IDs `408` e `422`; e registros de teste `asdf` nos IDs `187` e `342`).
 
-### Q2 e Q3 — Modelagem DDL e Ingestão Transacional ([`sql/schema.sql`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/sql/schema.sql) | [`ingestion.py`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/src/lh_nautical/ingestion.py))
+### Q2 e Q3 — Modelagem DDL e Ingestão Transacional ([`sql/schema.sql`](./sql/schema.sql) | [`ingestion.py`](./src/lh_nautical/ingestion.py))
 
 - Todas as 24 tabelas possuem chaves primárias (incluindo chaves compostas em `product_suppliers`, `stock_levels` e `variant_attribute_values`) e 37 chaves estrangeiras validadas.
 - Campos booleanos utilizam `BOOLEAN NOT NULL`, valores monetários utilizam `NUMERIC(12,2)`, quantidades físicas fracionárias (`weight_kg`, `quantity_received`, `quantity_on_hand`) utilizam `NUMERIC(12,3)` e códigos fiscais/documentos de tamanho fixo utilizam `CHAR(8)` (NCM), `CHAR(11)` (CPF), `CHAR(13)` (EAN) e `CHAR(44)` (Chave NFe).
 
-### Q4 — Top 10 Clientes Elite sem Fan-Out de JOIN ([`sql/q4_elite_customers.sql`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/sql/q4_elite_customers.sql) | [`metrics.py`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/src/lh_nautical/metrics.py))
+### Q4 — Top 10 Clientes Elite sem Fan-Out de JOIN ([`sql/q4_elite_customers.sql`](./sql/q4_elite_customers.sql) | [`metrics.py`](./src/lh_nautical/metrics.py))
 
 - Agregar `SUM(orders.total)` após o `JOIN` com `order_items` multiplicaria o valor de cada pedido pelo número de linhas do pedido (~3,01 itens/pedido), inflando o ticket médio em ~4x.
 - A solução isola o cálculo de `faturamento_total`, `frequencia` e `ticket_medio` na CTE `receita_por_cliente` (granularidade `orders`) e cruza o resultado com a CTE `diversidade_por_cliente` (`HAVING COUNT(DISTINCT category_id) >= 13`).
@@ -135,7 +135,7 @@ A tabela abaixo consolida os indicadores auditados tanto na **Visão Comercial C
 | 9 | **965** | R\$ 40.966,92 | 13 | R\$ 409.669,17 | 10 | Iluminação | 35 |
 | 10 | **21** | R\$ 40.475,73 | 13 | R\$ 607.135,92 | 15 | Coletes Salva-Vidas | 49 |
 
-### Q5 — Média Diária de Vendas por Dia da Semana ([`sql/q5_weekday_sales.sql`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/sql/q5_weekday_sales.sql) | [`metrics.py`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/src/lh_nautical/metrics.py))
+### Q5 — Média Diária de Vendas por Dia da Semana ([`sql/q5_weekday_sales.sql`](./sql/q5_weekday_sales.sql) | [`metrics.py`](./src/lh_nautical/metrics.py))
 
 - A consulta gera uma dimensão calendário contínua (`generate_series` no PostgreSQL / `pd.date_range(freq='D')` no pandas) entre a menor e a maior data do canal de loja física (`channel = 'pos'`), preenchendo dias sem vendas com `R$ 0,00` antes do cálculo da média.
 - A indexação do dia da semana segue o padrão ISO-8601 (`0 = Segunda-feira ... 6 = Domingo`), eliminando divergências entre `EXTRACT(ISODOW)` no SQL e `dt.dayofweek` no pandas.
@@ -150,7 +150,7 @@ A tabela abaixo consolida os indicadores auditados tanto na **Visão Comercial C
 | 1 | **Terça-feira** | 365 | 353 | 12 | R\$ 52.965.536,05 | **R\$ 145.111,06** |
 | 2 | **Quarta-feira** | 366 | 352 | 14 | R\$ 54.149.307,19 | **R\$ 147.948,93** |
 
-### Q6 — Previsão de Demanda Mensal ([`forecasting.py`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/src/lh_nautical/forecasting.py))
+### Q6 — Previsão de Demanda Mensal ([`forecasting.py`](./src/lh_nautical/forecasting.py))
 
 - A série mensal da **Bússola de Bordo 702** (`product_id = 74`) é reindexada sobre a grade contínua `pd.period_range('2020-01', '2026-03', freq='M')` com `fill_value=0` (preenchendo os meses sem vendas antes da janela móvel).
 - O módulo compara a **Média Móvel de 3 Meses Recursiva** (horizonte fechado em `2025-12`) e a **Média Móvel One-Step-Ahead** (atualizada mês a mês) contra os baselines **Naive ($t-1$)** e **Sazonal Naive ($t-12$)**:
@@ -162,7 +162,7 @@ A tabela abaixo consolida os indicadores auditados tanto na **Visão Comercial C
 | **MA(3) Recursiva** | 140 / 156 | 62 / 72 | **25,84** | **28,02** |
 | **Baseline Naive ($t-1$)** | 140 / 156 | 33 / 42 | **35,67** | **38,00** |
 
-### Q7 — Sistema de Recomendação Item-Item ([`recommender.py`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/src/lh_nautical/recommender.py))
+### Q7 — Sistema de Recomendação Item-Item ([`recommender.py`](./src/lh_nautical/recommender.py))
 
 - Constrói a matriz binária de interação `customer_id × product_id` e calcula a similaridade de cosseno entre o vetor do produto de referência (**Motor de Popa 1949**, `id = 116`) e os demais itens do catálogo.
 - O mapeamento de nomes utiliza indexação direta (`products.set_index("id")["name"].reindex(product_ids)`), preservando a ordem exata de pontuação:
@@ -179,7 +179,7 @@ A tabela abaixo consolida os indicadores auditados tanto na **Visão Comercial C
 
 ## 5. Testes Automatizados
 
-A suíte em [`tests/test_metrics.py`](file:///c:/Users/Rodrigo/Desktop/Projetos/1-lh_nautical_csv/tests/test_metrics.py) valida tanto fixtures sintéticas controladas (cálculo manual exato) quanto contratos de integridade sobre os CSVs reais:
+A suíte em [`tests/test_metrics.py`](./tests/test_metrics.py) valida tanto fixtures sintéticas controladas (cálculo manual exato) quanto contratos de integridade sobre os CSVs reais:
 
 ```bash
 PYTHONPATH=src pytest -v
